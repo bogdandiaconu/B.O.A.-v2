@@ -171,6 +171,11 @@
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="Administratori.aspx" />
+    <Content Include="Alocare.aspx" />
+    <Content Include="ArticoleD.aspx" />
+    <Content Include="ArticoleV.aspx" />
+    <Content Include="Batalion.aspx" />
+    <Content Include="Companie.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -181,6 +186,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Grade.aspx" />
+    <Content Include="Preturi.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -214,6 +221,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
+    <Content Include="Studenti.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -341,6 +349,27 @@
     <Compile Include="Administratori.aspx.designer.cs">
       <DependentUpon>Administratori.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Alocare.aspx.cs">
+      <DependentUpon>Alocare.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alocare.aspx.designer.cs">
+      <DependentUpon>Alocare.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ArticoleD.aspx.cs">
+      <DependentUpon>ArticoleD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ArticoleD.aspx.designer.cs">
+      <DependentUpon>ArticoleD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ArticoleV.aspx.cs">
+      <DependentUpon>ArticoleV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ArticoleV.aspx.designer.cs">
+      <DependentUpon>ArticoleV.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -352,6 +381,20 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Batalion.aspx.cs">
+      <DependentUpon>Batalion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Batalion.aspx.designer.cs">
+      <DependentUpon>Batalion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Companie.aspx.cs">
+      <DependentUpon>Companie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Companie.aspx.designer.cs">
+      <DependentUpon>Companie.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -369,7 +412,21 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Grade.aspx.cs">
+      <DependentUpon>Grade.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Grade.aspx.designer.cs">
+      <DependentUpon>Grade.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Preturi.aspx.cs">
+      <DependentUpon>Preturi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Preturi.aspx.designer.cs">
+      <DependentUpon>Preturi.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -386,6 +443,13 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="Studenti.aspx.cs">
+      <DependentUpon>Studenti.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Studenti.aspx.designer.cs">
+      <DependentUpon>Studenti.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

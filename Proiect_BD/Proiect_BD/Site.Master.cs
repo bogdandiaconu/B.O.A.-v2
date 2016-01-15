@@ -69,12 +69,28 @@ namespace Proiect_BD
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+            //dd.DataSource = new List<string> { "Studenti", "Companie","Administratori","Preturi" };
+           // dd.DataBind();
 
         }
-
+ 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
         {
             Context.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+        }
+
+        protected void dd_ItemDataBound(object sender, RepeaterItemEventArgs e)
+        {
+            if(e.Item.ItemType == ListItemType.Item)
+            {
+                string numeCategorie = e.Item.DataItem.ToString();
+                Literal link = (Literal)e.Item.FindControl("link");
+                if(link != null)
+                {
+                    link.Text = "<a href=\"~/"+numeCategorie+" \">"+numeCategorie+@"</a>";
+                }
+            }
         }
     }
 
