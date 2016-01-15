@@ -22,5 +22,13 @@ namespace Proiect_BD
                 s = c.Nume + " " + s;
                 Label1.Text = s;
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            string s = "";
+            foreach (var c in DataLayer.Class1.get_CDT_comp())
+                s = c.Nume + " " + s;
+            Label2.Text = s;
+        }
     }
 }
