@@ -23,13 +23,5 @@ namespace DataLayer.Models
         public virtual ICollection<ArticoleDrepturi> ArticoleDrepturis { get; set; }
         public virtual ICollection<ArticoleVest> ArticoleVests { get; set; }
         public virtual ICollection<Companie> Companies { get; set; }
-
-        public static IQueryable<Models.Administratori> get_Administratori()
-        {
-            var bd = new DataLayer.Models.ProiectBDContext();
-            var query = from b in bd.Administratoris
-                        select b;
-            return query;
-        }
     }
 }

@@ -18,9 +18,9 @@ namespace Proiect_BD
         protected void Button1_Click(object sender, EventArgs e)
         {
             string s = "";
-            foreach (var c in DataLayer.Models.Administratori.get_Administratori())
+            foreach (var c in DataLayer.Class1.get_Administratori())
                 s = c.Nume + " " + s;
-            Label1.Text = s;
+                Label1.Text = s;
         }
 
         protected void Button2_Click(object sender, EventArgs e)
