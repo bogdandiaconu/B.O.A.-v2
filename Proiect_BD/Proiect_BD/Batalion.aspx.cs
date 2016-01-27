@@ -11,7 +11,18 @@ namespace Proiect_BD
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //string s = "";
+            //foreach (var c in DataLayer.Class1.get_Administratori())
+            //    s = c.Nume + " " + s;
+            //ListBox1.Items.Add(s);
 
         }
+
+        //protected void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+            
+
+
+        //}
     }
 }
