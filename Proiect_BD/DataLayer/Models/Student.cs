@@ -24,5 +24,7 @@ namespace DataLayer.Models
         public virtual ICollection<ArticoleVest> ArticoleVests { get; set; }
         public virtual Companie Companie { get; set; }
         public virtual Grade Grade { get; set; }
+
+         
     }
 }

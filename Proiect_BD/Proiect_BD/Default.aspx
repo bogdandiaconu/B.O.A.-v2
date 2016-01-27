@@ -15,10 +15,11 @@ runat="server">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
     <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
     </p>
-<p class="lead"> &nbsp;</p>
-<p class="lead"> 
+<p class="lead">  
     <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Button" />
     </p>
+<p class="lead"> 
+    &nbsp;</p>
 <p class="lead"> &nbsp;</p>
 <p class="lead"> &nbsp;</p>
 <p class="lead"> &nbsp;</p> 
