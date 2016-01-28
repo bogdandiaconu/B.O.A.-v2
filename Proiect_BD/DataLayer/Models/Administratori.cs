@@ -46,6 +46,7 @@ namespace DataLayer.Models
 
             bd.Administratoris.Add(admin);
             bd.SaveChanges();
+            //sfsdf
         }
     }
 }
