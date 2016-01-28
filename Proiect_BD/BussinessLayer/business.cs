@@ -13,6 +13,14 @@ namespace BussinessLayer
         {
             return DataLayer.Models.Administratori.get_Administratori();
         }
+        public static void insert_Administratori(string nume, string prenume, int grad)
+        {
+            DataLayer.Models.Administratori.insert_Administratori(nume,prenume,grad);
+        }
+        public static void delete_Administratori(int id)
+        {
+            DataLayer.Models.Administratori.delete_Administratori(id);
+        }
     }
     public class clsBusiness_get_AlocareHrana
     {
