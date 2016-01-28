@@ -59,9 +59,21 @@ namespace DataLayer.Models
             bd.Administratoris.Remove(query);
             bd.Entry(query).State = System.Data.Entity.EntityState.Deleted;
             bd.SaveChanges();
+        }
 
+        public static void update_Administratori(int id, string nume, string prenume, int grad)
+        {
+            var bd = new DataLayer.Models.ProiectBDContext();
+            var query = (from b in bd.Administratoris
+                         where b.ID_Admistrator == id
+                         select b).First();
+            query.Nume = nume;
+            query.Prenume = prenume;
+            query.ID_Grad = grad;
 
+            bd.Entry(query).State = System.Data.Entity.EntityState.Modified;
 
+            bd.SaveChanges();
         }
     }
 }
