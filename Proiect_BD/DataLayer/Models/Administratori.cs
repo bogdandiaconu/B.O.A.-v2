@@ -45,8 +45,14 @@ namespace DataLayer.Models
             };
 
             bd.Administratoris.Add(admin);
+            bd.Entry(admin).State = System.Data.Entity.EntityState.Added;
             bd.SaveChanges();
-            //sfsdf
+          
+        }
+
+        public static void insert_Administratori(int id)
+        {
+            
         }
     }
 }
