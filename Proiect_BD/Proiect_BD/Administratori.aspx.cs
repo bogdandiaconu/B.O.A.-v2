@@ -11,7 +11,7 @@ namespace Proiect_BD
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            GridView1.DataSource = DataLayer.Models.Administratori.get_Administratori().ToList();
+            GridView1.DataSource = BussinessLayer.clsBusinessLayer.get_Administratori().ToList();
             GridView1.DataBind();
         }
 

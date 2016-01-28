@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DataLayer.Models
 {
@@ -17,5 +18,12 @@ namespace DataLayer.Models
         public virtual Administratori Administratori { get; set; }
         public virtual CDT_Comp CDT_Comp { get; set; }
         public virtual ICollection<Student> Students { get; set; }
+        public static IQueryable<Models.Companie> get_Companie()
+        {
+            var bd = new DataLayer.Models.ProiectBDContext();
+            var query = from b in bd.Companies
+                        select b;
+            return query;
+        }
     }
 }

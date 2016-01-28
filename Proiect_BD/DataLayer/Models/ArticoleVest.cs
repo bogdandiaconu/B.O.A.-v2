@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DataLayer.Models
 {
@@ -29,5 +30,12 @@ namespace DataLayer.Models
         public Nullable<int> Scurta_Camuflat { get; set; }
         public virtual Administratori Administratori { get; set; }
         public virtual Student Student { get; set; }
+        public static IQueryable<Models.ArticoleVest> get_ArticoleVest()
+        {
+            var bd = new DataLayer.Models.ProiectBDContext();
+            var query = from b in bd.ArticoleVests
+                        select b;
+            return query;
+        }
     }
 }

@@ -9,7 +9,9 @@ namespace BussinessLayer
 {
     public class clsBusinessLayer
     {
-
-
+        public static IQueryable<DataLayer.Models.Administratori> get_Administratori()
+        {
+            return DataLayer.Models.Administratori.get_Administratori();
+        }
     }
 }
