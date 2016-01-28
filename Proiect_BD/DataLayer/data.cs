@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data.Entity;
 namespace DataLayer
 {
-    public class Class1
+    public class clsDataLayer
     {
         //public static IQueryable<Models.Administratori> get_Administratori()
         //{
@@ -17,13 +17,5 @@ namespace DataLayer
         //                select b;
         //    return query;
         //}
-        public static IQueryable<Models.CDT_Comp> get_CDT_comp()
-        {
-            var bd = new DataLayer.Models.ProiectBDContext();
-            var query = from b in bd.CDT_Comp
-                        select b;
-            return query;
-        }
-
     }
 }
