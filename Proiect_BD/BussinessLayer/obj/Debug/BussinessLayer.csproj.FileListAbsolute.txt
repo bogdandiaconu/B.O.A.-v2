@@ -10,15 +10,3 @@ D:\Cursuri\Anul 3\Adm Baza Date\Tema2\GitHub\OrganizareAdministrativaBatalion\Pr
 D:\Cursuri\Anul 3\Adm Baza Date\Tema2\GitHub\OrganizareAdministrativaBatalion\Proiect_BD\BussinessLayer\obj\Debug\BussinessLayer.csprojResolveAssemblyReference.cache
 D:\Cursuri\Anul 3\Adm Baza Date\Tema2\GitHub\OrganizareAdministrativaBatalion\Proiect_BD\BussinessLayer\obj\Debug\BussinessLayer.dll
 D:\Cursuri\Anul 3\Adm Baza Date\Tema2\GitHub\OrganizareAdministrativaBatalion\Proiect_BD\BussinessLayer\obj\Debug\BussinessLayer.pdb
-D:\ProiectBD\GitHub\BOA\B.O.A.-v2\Proiect_BD\BussinessLayer\bin\Debug\BussinessLayer.dll.config
-D:\ProiectBD\GitHub\BOA\B.O.A.-v2\Proiect_BD\BussinessLayer\bin\Debug\BussinessLayer.dll
-D:\ProiectBD\GitHub\BOA\B.O.A.-v2\Proiect_BD\BussinessLayer\bin\Debug\BussinessLayer.pdb
-D:\ProiectBD\GitHub\BOA\B.O.A.-v2\Proiect_BD\BussinessLayer\bin\Debug\DataLayer.dll
-D:\ProiectBD\GitHub\BOA\B.O.A.-v2\Proiect_BD\BussinessLayer\bin\Debug\EntityFramework.dll
-D:\ProiectBD\GitHub\BOA\B.O.A.-v2\Proiect_BD\BussinessLayer\bin\Debug\EntityFramework.SqlServer.dll
-D:\ProiectBD\GitHub\BOA\B.O.A.-v2\Proiect_BD\BussinessLayer\bin\Debug\DataLayer.pdb
-D:\ProiectBD\GitHub\BOA\B.O.A.-v2\Proiect_BD\BussinessLayer\bin\Debug\EntityFramework.xml
-D:\ProiectBD\GitHub\BOA\B.O.A.-v2\Proiect_BD\BussinessLayer\bin\Debug\EntityFramework.SqlServer.xml
-D:\ProiectBD\GitHub\BOA\B.O.A.-v2\Proiect_BD\BussinessLayer\obj\Debug\BussinessLayer.csprojResolveAssemblyReference.cache
-D:\ProiectBD\GitHub\BOA\B.O.A.-v2\Proiect_BD\BussinessLayer\obj\Debug\BussinessLayer.dll
-D:\ProiectBD\GitHub\BOA\B.O.A.-v2\Proiect_BD\BussinessLayer\obj\Debug\BussinessLayer.pdb
