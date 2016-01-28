@@ -8,3 +8,13 @@ D:\Cursuri\Anul 3\Adm Baza Date\Tema2\GitHub\OrganizareAdministrativaBatalion\Pr
 D:\Cursuri\Anul 3\Adm Baza Date\Tema2\GitHub\OrganizareAdministrativaBatalion\Proiect_BD\DataLayer\bin\Debug\EntityFramework.SqlServer.xml
 D:\Cursuri\Anul 3\Adm Baza Date\Tema2\GitHub\OrganizareAdministrativaBatalion\Proiect_BD\DataLayer\obj\Debug\DataLayer.dll
 D:\Cursuri\Anul 3\Adm Baza Date\Tema2\GitHub\OrganizareAdministrativaBatalion\Proiect_BD\DataLayer\obj\Debug\DataLayer.pdb
+D:\Cursuri\Anul_III\Administrarea Bazelor de Date\GitHub\B.O.A.-v2\Proiect_BD\DataLayer\bin\Debug\DataLayer.dll.config
+D:\Cursuri\Anul_III\Administrarea Bazelor de Date\GitHub\B.O.A.-v2\Proiect_BD\DataLayer\bin\Debug\DataLayer.dll
+D:\Cursuri\Anul_III\Administrarea Bazelor de Date\GitHub\B.O.A.-v2\Proiect_BD\DataLayer\bin\Debug\DataLayer.pdb
+D:\Cursuri\Anul_III\Administrarea Bazelor de Date\GitHub\B.O.A.-v2\Proiect_BD\DataLayer\bin\Debug\EntityFramework.dll
+D:\Cursuri\Anul_III\Administrarea Bazelor de Date\GitHub\B.O.A.-v2\Proiect_BD\DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\Cursuri\Anul_III\Administrarea Bazelor de Date\GitHub\B.O.A.-v2\Proiect_BD\DataLayer\bin\Debug\EntityFramework.xml
+D:\Cursuri\Anul_III\Administrarea Bazelor de Date\GitHub\B.O.A.-v2\Proiect_BD\DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\Cursuri\Anul_III\Administrarea Bazelor de Date\GitHub\B.O.A.-v2\Proiect_BD\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+D:\Cursuri\Anul_III\Administrarea Bazelor de Date\GitHub\B.O.A.-v2\Proiect_BD\DataLayer\obj\Debug\DataLayer.dll
+D:\Cursuri\Anul_III\Administrarea Bazelor de Date\GitHub\B.O.A.-v2\Proiect_BD\DataLayer\obj\Debug\DataLayer.pdb

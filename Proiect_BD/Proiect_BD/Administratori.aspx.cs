@@ -13,6 +13,10 @@ namespace Proiect_BD
         {
             GridView1.DataSource = DataLayer.Models.Administratori.get_Administratori().ToList();
             GridView1.DataBind();
+            
+           // DataLayer.Models.Administratori.insert_Administratori(1203, "Ceaparu", "Marian", 2212);
+
+          
         }
 
         protected void TextBox1_TextChanged(object sender, EventArgs e)

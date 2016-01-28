@@ -10,3 +10,15 @@ D:\Cursuri\Anul 3\Adm Baza Date\Tema2\GitHub\OrganizareAdministrativaBatalion\Pr
 D:\Cursuri\Anul 3\Adm Baza Date\Tema2\GitHub\OrganizareAdministrativaBatalion\Proiect_BD\BussinessLayer\obj\Debug\BussinessLayer.csprojResolveAssemblyReference.cache
 D:\Cursuri\Anul 3\Adm Baza Date\Tema2\GitHub\OrganizareAdministrativaBatalion\Proiect_BD\BussinessLayer\obj\Debug\BussinessLayer.dll
 D:\Cursuri\Anul 3\Adm Baza Date\Tema2\GitHub\OrganizareAdministrativaBatalion\Proiect_BD\BussinessLayer\obj\Debug\BussinessLayer.pdb
+D:\Cursuri\Anul_III\Administrarea Bazelor de Date\GitHub\B.O.A.-v2\Proiect_BD\BussinessLayer\bin\Debug\BussinessLayer.dll.config
+D:\Cursuri\Anul_III\Administrarea Bazelor de Date\GitHub\B.O.A.-v2\Proiect_BD\BussinessLayer\bin\Debug\BussinessLayer.dll
+D:\Cursuri\Anul_III\Administrarea Bazelor de Date\GitHub\B.O.A.-v2\Proiect_BD\BussinessLayer\bin\Debug\BussinessLayer.pdb
+D:\Cursuri\Anul_III\Administrarea Bazelor de Date\GitHub\B.O.A.-v2\Proiect_BD\BussinessLayer\bin\Debug\DataLayer.dll
+D:\Cursuri\Anul_III\Administrarea Bazelor de Date\GitHub\B.O.A.-v2\Proiect_BD\BussinessLayer\bin\Debug\EntityFramework.dll
+D:\Cursuri\Anul_III\Administrarea Bazelor de Date\GitHub\B.O.A.-v2\Proiect_BD\BussinessLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\Cursuri\Anul_III\Administrarea Bazelor de Date\GitHub\B.O.A.-v2\Proiect_BD\BussinessLayer\bin\Debug\DataLayer.pdb
+D:\Cursuri\Anul_III\Administrarea Bazelor de Date\GitHub\B.O.A.-v2\Proiect_BD\BussinessLayer\bin\Debug\EntityFramework.xml
+D:\Cursuri\Anul_III\Administrarea Bazelor de Date\GitHub\B.O.A.-v2\Proiect_BD\BussinessLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\Cursuri\Anul_III\Administrarea Bazelor de Date\GitHub\B.O.A.-v2\Proiect_BD\BussinessLayer\obj\Debug\BussinessLayer.csprojResolveAssemblyReference.cache
+D:\Cursuri\Anul_III\Administrarea Bazelor de Date\GitHub\B.O.A.-v2\Proiect_BD\BussinessLayer\obj\Debug\BussinessLayer.dll
+D:\Cursuri\Anul_III\Administrarea Bazelor de Date\GitHub\B.O.A.-v2\Proiect_BD\BussinessLayer\obj\Debug\BussinessLayer.pdb
