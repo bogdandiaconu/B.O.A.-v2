@@ -8,3 +8,13 @@ D:\Cursuri\Anul 3\Adm Baza Date\Tema2\GitHub\OrganizareAdministrativaBatalion\Pr
 D:\Cursuri\Anul 3\Adm Baza Date\Tema2\GitHub\OrganizareAdministrativaBatalion\Proiect_BD\DataLayer\bin\Debug\EntityFramework.SqlServer.xml
 D:\Cursuri\Anul 3\Adm Baza Date\Tema2\GitHub\OrganizareAdministrativaBatalion\Proiect_BD\DataLayer\obj\Debug\DataLayer.dll
 D:\Cursuri\Anul 3\Adm Baza Date\Tema2\GitHub\OrganizareAdministrativaBatalion\Proiect_BD\DataLayer\obj\Debug\DataLayer.pdb
+D:\ProiectBD\GitHub\BOA\B.O.A.-v2\Proiect_BD\DataLayer\bin\Debug\DataLayer.dll.config
+D:\ProiectBD\GitHub\BOA\B.O.A.-v2\Proiect_BD\DataLayer\bin\Debug\DataLayer.dll
+D:\ProiectBD\GitHub\BOA\B.O.A.-v2\Proiect_BD\DataLayer\bin\Debug\DataLayer.pdb
+D:\ProiectBD\GitHub\BOA\B.O.A.-v2\Proiect_BD\DataLayer\bin\Debug\EntityFramework.dll
+D:\ProiectBD\GitHub\BOA\B.O.A.-v2\Proiect_BD\DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\ProiectBD\GitHub\BOA\B.O.A.-v2\Proiect_BD\DataLayer\bin\Debug\EntityFramework.xml
+D:\ProiectBD\GitHub\BOA\B.O.A.-v2\Proiect_BD\DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\ProiectBD\GitHub\BOA\B.O.A.-v2\Proiect_BD\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+D:\ProiectBD\GitHub\BOA\B.O.A.-v2\Proiect_BD\DataLayer\obj\Debug\DataLayer.dll
+D:\ProiectBD\GitHub\BOA\B.O.A.-v2\Proiect_BD\DataLayer\obj\Debug\DataLayer.pdb

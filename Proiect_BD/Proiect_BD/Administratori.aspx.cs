@@ -11,7 +11,13 @@ namespace Proiect_BD
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+     
+
+
+        
 
         }
+
     }
 }
