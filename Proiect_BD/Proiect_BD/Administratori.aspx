@@ -7,9 +7,13 @@
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-<<<<<<< HEAD
-    <h2>Administratori<asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Height="134px" Width="307px">
+    <h2>Administratori</h2>
+    <h2>&nbsp;<asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" Height="160px" Width="260px" Font-Overline="False" Font-Size="Smaller" Font-Strikeout="False" OnRowCancelingEdit="CancelEdit" OnRowDeleting="Delete" OnRowEditing="Edit" OnRowUpdating="Update">
         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+        <Columns>
+            <asp:CommandField ShowEditButton="True" />
+            <asp:CommandField ShowDeleteButton="True" />
+        </Columns>
         <EditRowStyle BackColor="#999999" />
         <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
         <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
@@ -23,34 +27,18 @@
 
         </asp:GridView>
     </h2>
-    <h2>&nbsp;</h2>
+    <h2>
+        <asp:Label ID="Label1" runat="server" Font-Size="Medium" Text="Nume: "></asp:Label>
+        <asp:TextBox ID="TextBox1" runat="server" Font-Size="Small" Height="20px" OnTextChanged="TextBox1_TextChanged" Width="110px"></asp:TextBox>
+        <asp:Label ID="Label2" runat="server" Font-Size="Medium" Text="Prenume: "></asp:Label>
+<asp:TextBox ID="TextBox2" runat="server" Height="20px" OnTextChanged="TextBox1_TextChanged" Width="110px" Font-Size="Small"></asp:TextBox>
+        <asp:Label ID="Label3" runat="server" Font-Size="Medium" Text="ID_Grad: "></asp:Label>
+        <asp:TextBox ID="TextBox3" runat="server" Height="20px" OnTextChanged="TextBox1_TextChanged" Width="70px" Font-Size="Small"></asp:TextBox>
+        <asp:Button ID="Button1" runat="server" Font-Size="Medium" Height="26px" OnClick="Button1_Click" Text="Add" Width="72px" />
+    </h2>
     <h2>
         &nbsp;&nbsp;&nbsp;
     </h2>
-    <p>
-        <asp:Label ID="Label1" runat="server" Font-Size="Medium" Text="Nume: "></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="TextBox1" runat="server" Font-Size="Small" Height="20px" OnTextChanged="TextBox1_TextChanged" Width="146px"></asp:TextBox>
-    </p>
-    <p>
-        <asp:Label ID="Label2" runat="server" Font-Size="Medium" Text="Prenume: "></asp:Label>
-&nbsp;
-<asp:TextBox ID="TextBox2" runat="server" Height="20px" OnTextChanged="TextBox1_TextChanged" Width="146px" Font-Size="Small"></asp:TextBox>
-    </p>
-    <p>
-        <asp:Label ID="Label3" runat="server" Font-Size="Medium" Text="ID_Grad: "></asp:Label>
-&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="TextBox3" runat="server" Height="20px" OnTextChanged="TextBox1_TextChanged" Width="146px" Font-Size="Small"></asp:TextBox>
-    </p>
-    <p>
-        <asp:Button ID="Button1" runat="server" Font-Size="Medium" Height="24px" OnClick="Button1_Click" Text="Add" Width="72px" />
-    </p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-=======
-
-
->>>>>>> origin/master
 
 
 </asp:Content>
