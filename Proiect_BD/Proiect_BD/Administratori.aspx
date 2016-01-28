@@ -1,8 +1,13 @@
 ﻿
+
+
+
+
 <%@ Page Title="Administratori" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Administratori.aspx.cs" Inherits="Proiect_BD.Administratori" %>
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<<<<<<< HEAD
     <h2>Administratori<asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Height="134px" Width="307px">
         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
         <EditRowStyle BackColor="#999999" />
@@ -42,6 +47,10 @@
     </p>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
+=======
+
+
+>>>>>>> origin/master
 
 
 </asp:Content>
