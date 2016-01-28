@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Xml.Linq;
 
 namespace DataLayer.Models
 {
@@ -30,6 +31,21 @@ namespace DataLayer.Models
             var query = from b in bd.Administratoris
                         select b;
             return query;
+        }
+
+        public static void insert_Administratori(int id, string nume, string prenume, int grad)
+        {
+            var bd = new DataLayer.Models.ProiectBDContext();
+            Administratori admin = new Administratori
+            {
+                ID_Admistrator = id,
+                Nume = nume,
+                Prenume = prenume,
+                ID_Grad = grad
+            };
+
+            bd.Administratoris.Add(admin);
+            bd.SaveChanges();
         }
     }
 }
