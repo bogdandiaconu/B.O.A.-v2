@@ -9,7 +9,7 @@ namespace BussinessLayer
 {
     public class clsBusiness_get_Administratori
     {
-        public static IQueryable<DataLayer.Models.Administratori> get_Administratori()
+        public static IQueryable<DataLayer.Models.newAdministratori> get_Administratori()
         {
             return DataLayer.Models.Administratori.get_Administratori();
         }
@@ -28,7 +28,7 @@ namespace BussinessLayer
     }
     public class clsBusiness_get_AlocareHrana
     {
-        public static IQueryable<DataLayer.Models.AlocareHrana> get_AlocareHrana()
+        public static IQueryable<DataLayer.Models.newAlocareHrana> get_AlocareHrana()
         {
             return DataLayer.Models.AlocareHrana.get_AlocareHrana();
         }
