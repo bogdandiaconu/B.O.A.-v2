@@ -25,5 +25,40 @@ namespace DataLayer.Models
                         select b;
             return query;
         }
+
+        public static void insert_Grade(string grad)
+        {
+            var bd = new DataLayer.Models.ProiectBDContext();
+            Grade gr = new Grade { Nume = grad };
+
+            bd.Grades.Add(gr);
+            bd.Entry(gr).State = System.Data.Entity.EntityState.Added;
+            bd.SaveChanges();
+        }
+
+        public static void delete_Grade(int id)
+        {
+            var bd = new DataLayer.Models.ProiectBDContext();
+            var gr = (from g in bd.Grades
+                      where g.ID_Grad == id
+                      select g).First();
+
+            bd.Grades.Remove(gr);
+            bd.Entry(gr).State = System.Data.Entity.EntityState.Deleted;
+            bd.SaveChanges();
+        }
+
+        public static void update_Grade(int id, string nume)
+        {
+            var bd = new DataLayer.Models.ProiectBDContext();
+            var gr = (from g in bd.Grades
+                     where g.ID_Grad == id
+                     select g).First();
+
+            gr.Nume = nume;
+
+            bd.Entry(gr).State = System.Data.Entity.EntityState.Modified;
+            bd.SaveChanges();
+        }
     }
 }
