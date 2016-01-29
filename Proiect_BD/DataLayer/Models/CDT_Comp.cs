@@ -24,5 +24,47 @@ namespace DataLayer.Models
                         select b;
             return query;
         }
+
+        public void insert_CDT_Comp(string nume, string prenume, int grad)
+        {
+            var bd = new DataLayer.Models.ProiectBDContext();
+            CDT_Comp cdt = new CDT_Comp
+            {
+                Nume = nume,
+                Prenume = prenume,
+                ID_Grad = grad
+            };
+
+            bd.CDT_Comp.Add(cdt);
+            bd.Entry(cdt).State = System.Data.Entity.EntityState.Added;
+            bd.SaveChanges();
+        }
+
+        public static void delete_CDT_Comp(int id)
+        {
+            var bd = new DataLayer.Models.ProiectBDContext();
+            var cdt = (from b in bd.CDT_Comp
+                       where b.ID_Comandant == id
+                       select b).First();
+
+            bd.CDT_Comp.Remove(cdt);
+            bd.Entry(cdt).State = System.Data.Entity.EntityState.Deleted;
+            bd.SaveChanges();
+        }
+
+        public void insert_CDT_Comp(int id, string nume, string prenume, int grad)
+        {
+            var bd = new DataLayer.Models.ProiectBDContext();
+            var cdt = (from b in bd.CDT_Comp
+                       where b.ID_Comandant == id
+                       select b).First();
+
+            cdt.Nume = nume;
+            cdt.Prenume = prenume;
+            cdt.ID_Grad = grad;
+
+            bd.Entry(cdt).State = System.Data.Entity.EntityState.Modified;
+            bd.SaveChanges();
+        }
     }
 }
