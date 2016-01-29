@@ -25,7 +25,7 @@ namespace DataLayer.Models
             return query;
         }
 
-        public void insert_CDT_Comp(string nume, string prenume, int grad)
+        public static void insert_CDT_Comp(string nume, string prenume, int grad)
         {
             var bd = new DataLayer.Models.ProiectBDContext();
             CDT_Comp cdt = new CDT_Comp
@@ -52,7 +52,7 @@ namespace DataLayer.Models
             bd.SaveChanges();
         }
 
-        public void insert_CDT_Comp(int id, string nume, string prenume, int grad)
+        public static void update_CDT_Comp(int id, string nume, string prenume, int grad)
         {
             var bd = new DataLayer.Models.ProiectBDContext();
             var cdt = (from b in bd.CDT_Comp
