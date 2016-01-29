@@ -4,6 +4,17 @@ using System.Linq;
 
 namespace DataLayer.Models
 {
+    public partial class newAlocareHrana
+    {
+        public int ID_Student { get; set; }
+        public string Nume_Student { get; set; }
+        public int ID_Pret { get; set; }
+        public string Nume_Produs { get; set; }
+        public double Pret { get; set; }
+        public int ID_Administrator { get; set; }
+        public string Nume_Administrator { get; set; }
+        public int Counter { get; set; }
+    }
     public partial class AlocareHrana
     {
         public int ID_Student { get; set; }
@@ -13,11 +24,24 @@ namespace DataLayer.Models
         public virtual Administratori Administratori { get; set; }
         public virtual Preturi Preturi { get; set; }
         public virtual Student Student { get; set; }
-        public static IQueryable<Models.AlocareHrana> get_AlocareHrana()
+        public static IQueryable<Models.newAlocareHrana> get_AlocareHrana()
         {
             var bd = new DataLayer.Models.ProiectBDContext();
-            var query = from b in bd.AlocareHranas
-                        select b;
+            var query = from a in bd.AlocareHranas
+                        join s in bd.Students on a.ID_Student equals s.ID_Student
+                        join p in bd.Preturis on a.ID_Pret equals p.ID_Pret
+                        join adm in bd.Administratoris on a.ID_Administrator equals adm.ID_Admistrator
+                        select new newAlocareHrana
+                        {
+                            ID_Student = s.ID_Student,
+                            Nume_Student = s.Nume + " " + s.Prenume,
+                            ID_Pret = p.ID_Pret,
+                            Nume_Produs = p.Nume,
+                            Pret = p.Pret,
+                            ID_Administrator = adm.ID_Admistrator,
+                            Nume_Administrator = adm.Nume + " " + adm.Prenume,
+                            Counter = a.Counter
+                        };
             return query;
         }
 
