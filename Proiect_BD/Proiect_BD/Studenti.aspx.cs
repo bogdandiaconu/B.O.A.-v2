@@ -17,7 +17,7 @@ namespace Proiect_BD
         }
         protected void BindData()
         {
-            GridView2.DataSource = DataLayer.Models.Student.get_Student().ToList();
+            GridView2.DataSource = BussinessLayer.clsBusiness_get_Student.get_Student().ToList();
             GridView2.DataBind();
         }
 
@@ -43,7 +43,7 @@ namespace Proiect_BD
             string ADresa = ((TextBox)GridView2.Rows[e.RowIndex].Cells[7].Controls[0]).Text;
             string ID_Companie = ((TextBox)GridView2.Rows[e.RowIndex].Cells[8].Controls[0]).Text;
             GridView2.EditIndex = -1;
-
+            
             GridView2.DataBind();
         }
 

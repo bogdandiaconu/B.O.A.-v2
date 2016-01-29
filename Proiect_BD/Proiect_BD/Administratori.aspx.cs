@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using DataLayer;
+using BussinessLayer;
 namespace Proiect_BD
 {
     public partial class Administratori : System.Web.UI.Page
@@ -12,20 +13,16 @@ namespace Proiect_BD
         protected void Page_Load(object sender, EventArgs e)
         {
             BindData();
-            GridView1.DataSource = BussinessLayer.clsBusinessLayer.get_Administratori().ToList();
+            GridView1.DataSource = BussinessLayer.clsBusiness_get_Administratori.get_Administratori().ToList();
             GridView1.DataBind();
             
            // DataLayer.Models.Administratori.insert_Administratori(1203, "Ceaparu", "Marian", 2212);
         }
 
-        protected void TextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         protected void Button1_Click(object sender, EventArgs e)
         {
-            // DataLayer.Models.Administratori.
+            DataLayer.Models.Administratori.insert_Administratori(TextBox1.Text, TextBox2.Text, Int32.Parse(TextBox3.Text));
+            BindData();
         }
         protected void BindData()
         {

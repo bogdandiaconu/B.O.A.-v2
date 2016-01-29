@@ -1,9 +1,11 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Companie.aspx.cs" Inherits="Proiect_BD.Companie" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CdtCompanie.aspx.cs" Inherits="Proiect_BD.Batalion" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <h2>Companii</h2>
-    <p>&nbsp;</p>
+    <h2>Comandanti Companie</h2>
+     <p>
+         &nbsp;<br />
+    </p>
     <p>
-        <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+        <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" OnRowCancelingEdit="CancelEdit" OnRowDeleting="Delete" OnRowEditing="Edit" OnRowUpdating="Update">
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
             <Columns>
                 <asp:CommandField ShowEditButton="True" />
@@ -20,17 +22,37 @@
             <SortedDescendingCellStyle BackColor="#FFFDF8" />
             <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
         </asp:GridView>
-    </p>
+</p>
     <p>
         &nbsp;</p>
     <p>
-        <asp:Label ID="Label2" runat="server" Text="Nume:"></asp:Label>
+        <asp:Label ID="Label1" runat="server" Text="Nume:"></asp:Label>
+        <asp:TextBox ID="TextBox1" runat="server" Width="100px"></asp:TextBox>
+        <asp:Label ID="Label2" runat="server" Text="Prenume:"></asp:Label>
         <asp:TextBox ID="TextBox2" runat="server" Width="100px"></asp:TextBox>
-        <asp:Label ID="Label3" runat="server" Text="ID_Comandant:"></asp:Label>
-        <asp:TextBox ID="TextBox3" runat="server" Width="50px"></asp:TextBox>
-        <asp:Label ID="Label4" runat="server" Text="ID_Administrator:"></asp:Label>
-        <asp:TextBox ID="TextBox4" runat="server" Width="100px"></asp:TextBox>
-    &nbsp;&nbsp;
+        <asp:Label ID="Label3" runat="server" Text="ID_Grad:"></asp:Label>
+        <asp:TextBox ID="TextBox3" runat="server" Width="100px"></asp:TextBox>
+&nbsp;&nbsp;&nbsp;
         <asp:Button ID="Button1" runat="server" Text="Add" />
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
     </p>
 </asp:Content>
