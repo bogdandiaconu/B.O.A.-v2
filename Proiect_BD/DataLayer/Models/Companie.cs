@@ -4,6 +4,15 @@ using System.Linq;
 
 namespace DataLayer.Models
 {
+    public partial class newCompanie
+    {
+        public int ID_Companie { get; set; }
+        public string Nume { get; set; }
+        public int ID_Comandant { get; set; }
+        public string Nume_Comandant { get; set; }
+        public int ID_Administrator { get; set; }
+        public string Nume_Administrator { get; set; }
+    }
     public partial class Companie
     {
         public Companie()
@@ -18,11 +27,21 @@ namespace DataLayer.Models
         public virtual Administratori Administratori { get; set; }
         public virtual CDT_Comp CDT_Comp { get; set; }
         public virtual ICollection<Student> Students { get; set; }
-        public static IQueryable<Models.Companie> get_Companie()
+        public static IQueryable<Models.newCompanie> get_Companie()
         {
             var bd = new DataLayer.Models.ProiectBDContext();
             var query = from b in bd.Companies
-                        select b;
+                        join c in bd.CDT_Comp on b.ID_Comandant equals c.ID_Comandant
+                        join a in bd.Administratoris on b.ID_Administrator equals a.ID_Admistrator
+                        select new newCompanie
+                        {
+                            ID_Companie = b.ID_Companie,
+                            Nume = b.Nume,
+                            ID_Comandant = b.ID_Comandant,
+                            Nume_Comandant = c.Nume+" "+c.Prenume,
+                            ID_Administrator = b.ID_Administrator,
+                            Nume_Administrator = a.Nume+" "+a.Prenume
+                        };
             return query;
         }
 
