@@ -61,7 +61,7 @@ namespace DataLayer.Models
             aloc.ID_Administrator = admin;
             aloc.Counter = counter;
 
-            bd.Entry(query).State = System.Data.Entity.EntityState.Modified;
+            bd.Entry(aloc).State = System.Data.Entity.EntityState.Modified;
             bd.SaveChanges();
         }
     }
