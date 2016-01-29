@@ -65,6 +65,18 @@ namespace BussinessLayer
         {
             return DataLayer.Models.CDT_Comp.get_CDT_comp();
         }
+        public void insert_CDT_Comp(string nume, string prenume, int grad)
+        {
+            DataLayer.Models.CDT_Comp.insert_CDT_Comp(nume, prenume, grad);
+        }
+        public static void delete_CDT_Comp(int id)
+        {
+            DataLayer.Models.CDT_Comp.delete_CDT_Comp(id);
+        }
+        public static void update_CDT_Comp(int id, string nume, string prenume, int grad)
+        {
+            DataLayer.Models.CDT_Comp.update_CDT_Comp(id, nume, prenume, grad);
+        }
     }
     public class clsBusiness_get_Companie
     {
