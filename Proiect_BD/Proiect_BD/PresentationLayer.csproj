@@ -174,7 +174,7 @@
     <Content Include="Alocare.aspx" />
     <Content Include="ArticoleD.aspx" />
     <Content Include="ArticoleV.aspx" />
-    <Content Include="Batalion.aspx" />
+    <Content Include="CdtCompanie.aspx" />
     <Content Include="Companie.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
@@ -381,12 +381,12 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Batalion.aspx.cs">
-      <DependentUpon>Batalion.aspx</DependentUpon>
+    <Compile Include="CdtCompanie.aspx.cs">
+      <DependentUpon>CdtCompanie.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Batalion.aspx.designer.cs">
-      <DependentUpon>Batalion.aspx</DependentUpon>
+    <Compile Include="CdtCompanie.aspx.designer.cs">
+      <DependentUpon>CdtCompanie.aspx</DependentUpon>
     </Compile>
     <Compile Include="Companie.aspx.cs">
       <DependentUpon>Companie.aspx</DependentUpon>

@@ -78,7 +78,7 @@
             <div id="topContent" style="text-align: center">
                <ItemTemplate>
                     <b style="font-size : large; font-style: normal"> 
-                        <asp:HyperLink ID="Bat" runat="server" NavigateUrl="~/Batalion.aspx"
+                        <asp:HyperLink ID="Bat" runat="server" NavigateUrl="~/CdtCompanie.aspx"
                             Text="CdtCompanie " />|
                         <asp:HyperLink ID="Adm" runat="server" NavigateUrl="~/Administratori.aspx"
                             Text="Administratori " />|

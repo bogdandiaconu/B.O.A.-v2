@@ -79,3 +79,17 @@ Proiect_BD/Proiect_BD/bin/Proiect_BD.pdb
 *.cache
 Proiect_BD/Proiect_BD/obj/Debug/PresentationLayer.csproj.FileListAbsolute.txt
 *.config
+Proiect_BD/.vs/config/applicationhost.config
+Proiect_BD/.vs/config/applicationhost.config
+*.config
+*.dll
+*.suo
+*.pdb
+*.csproj
+*.txt
+*.cache
+Proiect_BD/Proiect_BD/bin/BussinessLayer.dll
+*.pdb
+Proiect_BD/Proiect_BD/bin/DataLayer.dll
+*.pdb
+*.csproj
