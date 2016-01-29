@@ -5,7 +5,6 @@ Proiect_BD/BussinessLayer/obj/Debug/BussinessLayer.csprojResolveAssemblyReferenc
 Proiect_BD/BussinessLayer/obj/Debug/BussinessLayer.pdb
 Proiect_BD/DataLayer/bin/Debug/DataLayer.dll
 Proiect_BD/DataLayer/obj/Debug/DataLayer.csproj.FileListAbsolute.txt
-Proiect_BD/Proiect_BD/Administratori.aspx.designer.cs
 Proiect_BD/.vs/config/applicationhost.config
 Proiect_BD/.vs/Proiect_BD/v14/.suo
 Proiect_BD/BussinessLayer/bin/Debug/DataLayer.dll
@@ -46,8 +45,6 @@ Proiect_BD/Proiect_BD/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 *.pdb
 Proiect_BD/Proiect_BD/bin/DataLayer.pdb
 *.dll
-*.cs
-Proiect_BD/Proiect_BD/Administratori.aspx.designer.cs
 *.cache
 Proiect_BD/DataLayer/obj/Debug/DataLayer.dll
 *.txt
@@ -93,3 +90,4 @@ Proiect_BD/Proiect_BD/bin/BussinessLayer.dll
 Proiect_BD/Proiect_BD/bin/DataLayer.dll
 *.pdb
 *.csproj
+Proiect_BD/.vs/Proiect_BD/v14/.suo
