@@ -84,6 +84,18 @@ namespace BussinessLayer
         {
             return DataLayer.Models.Companie.get_Companie();
         }
+        public static void insert_Companie(string nume, int com, int admin)
+        {
+            DataLayer.Models.Companie.insert_Companie(nume,com,admin);
+        }
+        public static void delete_Companie(int id)
+        {
+            DataLayer.Models.Companie.delete_Companie(id);
+        }
+        public static void update_Companie(int id, string nume, int com, int admin)
+        {
+            DataLayer.Models.Companie.update_Companie(id, nume, com, admin);
+        }
     }
     public class clsBusiness_get_Grade
     {
