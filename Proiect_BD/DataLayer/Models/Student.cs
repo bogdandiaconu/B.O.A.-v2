@@ -58,5 +58,53 @@ namespace DataLayer.Models
             return query;
         }
 
+        public static void insert_Student(string nume, string prenume, int grad, string cnp, string adresa, int comp)
+        {
+            var bd = new DataLayer.Models.ProiectBDContext();
+            Student st = new Student
+            {
+                Nume = nume,
+                Prenume = prenume,
+                ID_Grad = grad,
+                CNP = cnp,
+                Adresa = adresa,
+                ID_Companie = comp
+            };
+
+            bd.Students.Add(st);
+            bd.Entry(st).State = System.Data.Entity.EntityState.Added;
+            bd.SaveChanges();
+        }
+
+        public static void delete_Student(int id)
+        {
+            var bd = new DataLayer.Models.ProiectBDContext();
+            var st = (from b in bd.Students
+                     where b.ID_Student == id
+                     select b).First();
+
+            bd.Students.Remove(st);
+            bd.Entry(st).State = System.Data.Entity.EntityState.Deleted;
+            bd.SaveChanges();
+        }
+
+        public static void update_Student(int id, string nume, string prenume, int grad, string cnp, string adresa, int comp)
+        {
+            var bd = new DataLayer.Models.ProiectBDContext();
+            var st = (from b in bd.Students
+                      where b.ID_Student == id
+                      select b).First();
+
+            st.Nume = nume;
+            st.Prenume = prenume;
+            st.ID_Grad = grad;
+            st.CNP = cnp;
+            st.Adresa = adresa;
+            st.ID_Companie = comp;
+
+            bd.Entry(st).State = System.Data.Entity.EntityState.Modified;
+            bd.SaveChanges();
+        }
+
     }
 }
