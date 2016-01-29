@@ -13,12 +13,36 @@ namespace BussinessLayer
         {
             return DataLayer.Models.Administratori.get_Administratori();
         }
+        public static void insert_Administratori(string nume, string prenume, int grad)
+        {
+            DataLayer.Models.Administratori.insert_Administratori(nume,prenume,grad);
+        }
+        public static void delete_Administratori(int id)
+        {
+            DataLayer.Models.Administratori.delete_Administratori(id);
+        }
+        public static void update_Administratori(int id, string nume, string prenume, int grad)
+        {
+            DataLayer.Models.Administratori.update_Administratori(id, nume, prenume, grad);
+        }
     }
     public class clsBusiness_get_AlocareHrana
     {
         public static IQueryable<DataLayer.Models.AlocareHrana> get_AlocareHrana()
         {
             return DataLayer.Models.AlocareHrana.get_AlocareHrana();
+        }
+        public static void insert_AlocareHrana(int student, int pret, int admin, int counter)
+        {
+            DataLayer.Models.AlocareHrana.insert_AlocareHrana(student,pret,admin,counter);
+        }
+        public static void delete_AlocareHrana(int student, int pret)
+        {
+            DataLayer.Models.AlocareHrana.delete_AlocareHrana(student,pret);
+        }
+        public static void update_AlocareHrana(int student, int pret, int admin, int counter)
+        {
+            DataLayer.Models.AlocareHrana.update_AlocareHrana(student, pret, admin, counter);
         }
     }
     public class clsBusiness_get_Articole_Drepturi

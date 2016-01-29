@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Xml.Linq;
+using System.Data.Linq;
 
 namespace DataLayer.Models
 {
@@ -33,20 +33,47 @@ namespace DataLayer.Models
             return query;
         }
 
-        public static void insert_Administratori(int id, string nume, string prenume, int grad)
+        public static void insert_Administratori(string nume, string prenume, int grad)
         {
             var bd = new DataLayer.Models.ProiectBDContext();
             Administratori admin = new Administratori
             {
-                ID_Admistrator = id,
                 Nume = nume,
                 Prenume = prenume,
                 ID_Grad = grad
             };
 
             bd.Administratoris.Add(admin);
+            bd.Entry(admin).State = System.Data.Entity.EntityState.Added;
             bd.SaveChanges();
-            //sfsdf
+          
+        }
+
+        public static void delete_Administratori(int id)
+        {
+            var bd = new DataLayer.Models.ProiectBDContext();
+            var query = (from b in bd.Administratoris
+                        where b.ID_Admistrator == id
+                        select b).First();
+
+            bd.Administratoris.Remove(query);
+            bd.Entry(query).State = System.Data.Entity.EntityState.Deleted;
+            bd.SaveChanges();
+        }
+
+        public static void update_Administratori(int id, string nume, string prenume, int grad)
+        {
+            var bd = new DataLayer.Models.ProiectBDContext();
+            var query = (from b in bd.Administratoris
+                         where b.ID_Admistrator == id
+                         select b).First();
+            query.Nume = nume;
+            query.Prenume = prenume;
+            query.ID_Grad = grad;
+
+            bd.Entry(query).State = System.Data.Entity.EntityState.Modified;
+
+            bd.SaveChanges();
         }
     }
 }
