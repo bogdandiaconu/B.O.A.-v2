@@ -15,15 +15,12 @@ namespace BussinessLayer
         }
         public static bool insert_Administratori(string nume, string prenume, int grad)
         {
-            int ok = 0;
-            var listgrade = DataLayer.Models.Grade.get_Grade().ToList();
-            foreach (var item in listgrade)
-                if (item.ID_Grad == grad) ok = 1;
-            if(ok==0)
-                return false;
-                    
-            DataLayer.Models.Administratori.insert_Administratori(nume,prenume,grad);
-            return true;
+            if (DataLayer.Models.Administratori.Exists(grad))
+            {
+                DataLayer.Models.Administratori.insert_Administratori(nume, prenume, grad);
+                return true;
+            }
+            return false;
         }
         public static void delete_Administratori(int id)
         {
@@ -31,14 +28,12 @@ namespace BussinessLayer
         }
         public static bool update_Administratori(int id, string nume, string prenume, int grad)
         {
-            int ok = 0;
-            var listgrade = DataLayer.Models.Grade.get_Grade().ToList();
-            foreach (var item in listgrade)
-                if (item.ID_Grad == grad) ok = 1;
-            if (ok == 0)
-                return false;
-            DataLayer.Models.Administratori.update_Administratori(id, nume, prenume, grad);
-            return true;
+            if (DataLayer.Models.Administratori.Exists(grad))
+            {
+                DataLayer.Models.Administratori.update_Administratori(id,nume, prenume, grad);
+                return true;
+            }
+            return false;
         }
     }
     public class clsBusiness_get_AlocareHrana
@@ -47,17 +42,35 @@ namespace BussinessLayer
         {
             return DataLayer.Models.AlocareHrana.get_AlocareHrana();
         }
-        public static void insert_AlocareHrana(int student, int pret, int admin, int counter)
+        public static bool insert_AlocareHrana(int student, int pret, int admin, int counter)
         {
-            DataLayer.Models.AlocareHrana.insert_AlocareHrana(student,pret,admin,counter);
+
+            if (DataLayer.Models.Student.Exists(student) && (DataLayer.Models.Preturi.Exists(pret)) && (DataLayer.Models.Administratori.Exists(admin)))
+            {
+                if (DataLayer.Models.AlocareHrana.Exists(student, pret))
+                {
+                    DataLayer.Models.AlocareHrana.increment_AlocareHrana(student, pret, counter);
+                    return true;
+                }
+                DataLayer.Models.AlocareHrana.insert_AlocareHrana(student, pret, admin, counter);
+                return true;
+            }
+            return false;
+            
         }
         public static void delete_AlocareHrana(int student, int pret)
         {
             DataLayer.Models.AlocareHrana.delete_AlocareHrana(student,pret);
         }
-        public static void update_AlocareHrana(int student, int pret, int admin, int counter)
+        public static bool update_AlocareHrana(int student, int pret, int admin, int counter)
         {
-            DataLayer.Models.AlocareHrana.update_AlocareHrana(student, pret, admin, counter);
+            if (DataLayer.Models.Student.Exists(student) && (DataLayer.Models.Preturi.Exists(pret)) && (DataLayer.Models.Administratori.Exists(admin)))
+            {
+                DataLayer.Models.AlocareHrana.update_AlocareHrana(student, pret, admin, counter);
+                return true;
+            }
+            return false;
+            
         }
     }
     public class clsBusiness_get_Articole_Drepturi
@@ -66,12 +79,36 @@ namespace BussinessLayer
         {
             return DataLayer.Models.ArticoleDrepturi.get_ArticoleDrepturi();
         }
+        public static bool insert_ArticoleDrepturi(int id_stud, int id_admin, DateTime data, int savoniera,
+                                                    int sapun, int spuma, int aparat, int caiete, int rigla,
+                                                    int guma, int crema, int maieu, int agrafe, int capse)
+        {
+            if (DataLayer.Models.Student.Exists(id_stud) && (DataLayer.Models.Administratori.Exists(id_admin)))
+            {
+                DataLayer.Models.ArticoleDrepturi.insert_ArticoleDrepturi(id_stud, id_admin, data, savoniera, sapun, spuma, aparat, caiete, rigla, guma, crema, maieu, agrafe, capse);
+                return true;
+            }
+                return false;
+        }
     }
     public class clsBusiness_get_ArticoleVest
     {
         public static IQueryable<DataLayer.Models.newArticoleVest> get_ArticoleVest()
         {
             return DataLayer.Models.ArticoleVest.get_ArticoleVest();
+        }
+        public static bool insert_ArticoleVest(int id_stud, int id_admin, DateTime data, int bocanci,
+                                                int capela, int cascheta, int costCamuflaj, int costTercot,
+                                                int costCamgarn, int camasaAlba, int camasaArma, int camasaCamo,
+                                                int boneta, int fular, int pantofi, int ghete, int nominal, int romania,
+                                                int cuc, int cravata, int scurtaO, int scurtaC)
+        {
+            if (DataLayer.Models.Student.Exists(id_stud) && (DataLayer.Models.Administratori.Exists(id_admin)))
+            {
+                DataLayer.Models.ArticoleVest.insert_ArticoleVest(id_stud, id_admin, data, bocanci, capela, cascheta, costCamuflaj, costTercot, costCamgarn, camasaAlba, camasaArma, camasaCamo, boneta, fular, pantofi, ghete, nominal, romania, cuc, cravata, scurtaO, scurtaC);
+                return true;
+            }
+            return false;
         }
     }
     public class clsBusiness_get_CDT_Comp
@@ -80,17 +117,28 @@ namespace BussinessLayer
         {
             return DataLayer.Models.CDT_Comp.get_CDT_comp();
         }
-        public void insert_CDT_Comp(string nume, string prenume, int grad)
+        public static bool insert_CDT_Comp(string nume, string prenume, int grad)
         {
-            DataLayer.Models.CDT_Comp.insert_CDT_Comp(nume, prenume, grad);
+            if (DataLayer.Models.Grade.Exists(grad))
+            {
+                DataLayer.Models.CDT_Comp.insert_CDT_Comp(nume, prenume, grad);
+                return true;
+            }
+            return false;
         }
         public static void delete_CDT_Comp(int id)
         {
             DataLayer.Models.CDT_Comp.delete_CDT_Comp(id);
         }
-        public static void update_CDT_Comp(int id, string nume, string prenume, int grad)
+        public static bool update_CDT_Comp(int id, string nume, string prenume, int grad)
         {
-            DataLayer.Models.CDT_Comp.update_CDT_Comp(id, nume, prenume, grad);
+            if (DataLayer.Models.Grade.Exists(grad))
+            {
+                DataLayer.Models.CDT_Comp.update_CDT_Comp(id, nume, prenume, grad);
+                return true;
+            }
+            return false;
+            
         }
     }
     public class clsBusiness_get_Companie
@@ -99,17 +147,28 @@ namespace BussinessLayer
         {
             return DataLayer.Models.Companie.get_Companie();
         }
-        public static void insert_Companie(string nume, int com, int admin)
+        public static bool insert_Companie(string nume, int com, int admin)
         {
-            DataLayer.Models.Companie.insert_Companie(nume,com,admin);
+            if((DataLayer.Models.Administratori.Exists(admin))&&(DataLayer.Models.CDT_Comp.Exists(com)))
+            {
+                DataLayer.Models.Companie.insert_Companie(nume, com, admin);
+                return true;
+            }
+            return false;
         }
         public static void delete_Companie(int id)
         {
             DataLayer.Models.Companie.delete_Companie(id);
         }
-        public static void update_Companie(int id, string nume, int com, int admin)
+        public static bool update_Companie(int id, string nume, int com, int admin)
         {
-            DataLayer.Models.Companie.update_Companie(id, nume, com, admin);
+            if (DataLayer.Models.Administratori.Exists(admin)&&(DataLayer.Models.CDT_Comp.Exists(com)))
+            {
+                DataLayer.Models.Companie.update_Companie(id, nume, com, admin);
+                return true;
+            }
+            return false;
+            
         }
     }
     public class clsBusiness_get_Grade
@@ -125,12 +184,38 @@ namespace BussinessLayer
         {
             return DataLayer.Models.Preturi.get_Preturi();
         }
+        public static void insert_Preturi(string nume, double pret, DateTime data)
+        {
+            DataLayer.Models.Preturi.insert_Preturi(nume, pret, data);
+        }
+        public static void update_Pret(int id, string nume, double pret, DateTime data)
+        {
+            DataLayer.Models.Preturi.update_Preturi(id, nume, pret, data);
+        }
     }
     public class clsBusiness_get_Student
     {
         public static IQueryable<DataLayer.Models.newStudent> get_Student()
         {
             return DataLayer.Models.Student.get_Student();
+        }
+        public static bool insert_Student(string nume, string prenume, int grad, string cnp, string adresa, int comp)
+        {
+            if(DataLayer.Models.Companie.Exists(comp))
+            {
+                DataLayer.Models.Student.insert_Student(nume, prenume, grad, cnp, adresa, comp);
+                return true;
+            }
+            return false;
+        }
+        public static bool update_Student(int id, string nume, string prenume, int grad, string cnp, string adresa, int comp)
+        {
+            if((DataLayer.Models.Student.Exists(id))&&(DataLayer.Models.Companie.Exists(comp)))
+            {
+                DataLayer.Models.Student.update_Student(id, nume, prenume, grad, cnp, adresa, comp);
+                return true;
+            }
+            return false;
         }
     }
 }
