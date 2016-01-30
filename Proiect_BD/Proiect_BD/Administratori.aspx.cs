@@ -55,7 +55,7 @@ namespace Proiect_BD
             string Prenume = ((TextBox)GridView1.Rows[e.RowIndex].Cells[4].Controls[0]).Text;
             string ID_Grad = ((TextBox)GridView1.Rows[e.RowIndex].Cells[5].Controls[0]).Text;
 
-            BussinessLayer.clsBusiness_get_Administratori.update_Administratori(Int32.Parse(ID), Nume, Prenume, Int32.Parse(ID_Grad));
+            bool value=BussinessLayer.clsBusiness_get_Administratori.update_Administratori(Int32.Parse(ID), Nume, Prenume, Int32.Parse(ID_Grad));
             GridView1.EditIndex = -1;
             BindData();
         }

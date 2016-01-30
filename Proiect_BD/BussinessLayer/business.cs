@@ -28,7 +28,7 @@ namespace BussinessLayer
         }
         public static bool update_Administratori(int id, string nume, string prenume, int grad)
         {
-            if (DataLayer.Models.Administratori.Exists(grad))
+            if (DataLayer.Models.Grade.Exists(grad))
             {
                 DataLayer.Models.Administratori.update_Administratori(id,nume, prenume, grad);
                 return true;
