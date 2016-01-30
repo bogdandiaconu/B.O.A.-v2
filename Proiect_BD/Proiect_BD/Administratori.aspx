@@ -10,7 +10,7 @@
     <h2>Administratori</h2>
     <p>&nbsp;</p>
     <p>
-        <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+        <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" OnRowDeleting="Delete" OnRowEditing="Edit" OnRowUpdating="Update" Width="244px"  EnableViewState="true" >
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
             <Columns>
                 <asp:CommandField ShowEditButton="True" />

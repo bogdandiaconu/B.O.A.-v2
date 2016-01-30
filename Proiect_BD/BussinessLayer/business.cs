@@ -13,17 +13,32 @@ namespace BussinessLayer
         {
             return DataLayer.Models.Administratori.get_Administratori();
         }
-        public static void insert_Administratori(string nume, string prenume, int grad)
+        public static bool insert_Administratori(string nume, string prenume, int grad)
         {
+            int ok = 0;
+            var listgrade = DataLayer.Models.Grade.get_Grade().ToList();
+            foreach (var item in listgrade)
+                if (item.ID_Grad == grad) ok = 1;
+            if(ok==0)
+                return false;
+                    
             DataLayer.Models.Administratori.insert_Administratori(nume,prenume,grad);
+            return true;
         }
         public static void delete_Administratori(int id)
         {
             DataLayer.Models.Administratori.delete_Administratori(id);
         }
-        public static void update_Administratori(int id, string nume, string prenume, int grad)
+        public static bool update_Administratori(int id, string nume, string prenume, int grad)
         {
+            int ok = 0;
+            var listgrade = DataLayer.Models.Grade.get_Grade().ToList();
+            foreach (var item in listgrade)
+                if (item.ID_Grad == grad) ok = 1;
+            if (ok == 0)
+                return false;
             DataLayer.Models.Administratori.update_Administratori(id, nume, prenume, grad);
+            return true;
         }
     }
     public class clsBusiness_get_AlocareHrana
