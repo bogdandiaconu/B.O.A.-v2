@@ -4,7 +4,7 @@
 <p>&nbsp;</p>
     <p>&nbsp;</p>
     <p>
-        <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="Both">
+        <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="Both" OnRowCancelingEdit="CancelEdit" OnRowDeleting="Delete" OnRowEditing="Edit" OnRowUpdating="Update">
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
             <Columns>
                 <asp:CommandField ShowEditButton="True" />
@@ -31,7 +31,10 @@
         <asp:TextBox ID="TextBox2" runat="server" Width="50px"></asp:TextBox>
         <asp:Label ID="Label3" runat="server" Text="ID_Administrator:"></asp:Label>
         <asp:TextBox ID="TextBox3" runat="server" Width="50px"></asp:TextBox>
-        <asp:Button ID="Button1" runat="server" Text="Add" />
+        &nbsp;<asp:Label ID="Label4" runat="server" Text="Counter:"></asp:Label>
+        <asp:TextBox ID="TextBox4" runat="server" Width="50px"></asp:TextBox>
+        &nbsp;&nbsp;
+        <asp:Button ID="Button1" runat="server" Text="Add" OnClick="Button1_Click" />
         <br />
     </p>
     <p>

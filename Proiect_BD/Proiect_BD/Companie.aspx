@@ -3,7 +3,7 @@
     <h2>Companii</h2>
     <p>&nbsp;</p>
     <p>
-        <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+        <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" OnRowCancelingEdit="CancelEdit" OnRowDeleting="Delete" OnRowEditing="Edit" OnRowUpdating="Update">
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
             <Columns>
                 <asp:CommandField ShowEditButton="True" />
@@ -31,6 +31,6 @@
         <asp:Label ID="Label4" runat="server" Text="ID_Administrator:"></asp:Label>
         <asp:TextBox ID="TextBox4" runat="server" Width="100px"></asp:TextBox>
     &nbsp;&nbsp;
-        <asp:Button ID="Button1" runat="server" Text="Add" />
+        <asp:Button ID="Button1" runat="server" Text="Add" OnClick="Button1_Click" />
     </p>
 </asp:Content>

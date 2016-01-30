@@ -15,7 +15,7 @@ namespace BussinessLayer
         }
         public static bool insert_Administratori(string nume, string prenume, int grad)
         {
-            if (DataLayer.Models.Administratori.Exists(grad))
+            if (DataLayer.Models.Grade.Exists(grad))
             {
                 DataLayer.Models.Administratori.insert_Administratori(nume, prenume, grad);
                 return true;
@@ -210,7 +210,7 @@ namespace BussinessLayer
         }
         public static bool update_Student(int id, string nume, string prenume, int grad, string cnp, string adresa, int comp)
         {
-            if((DataLayer.Models.Student.Exists(id))&&(DataLayer.Models.Companie.Exists(comp)))
+            if((DataLayer.Models.Student.Exists(id))&&(DataLayer.Models.Companie.Exists(comp))&&DataLayer.Models.Grade.Exists(grad))
             {
                 DataLayer.Models.Student.update_Student(id, nume, prenume, grad, cnp, adresa, comp);
                 return true;
@@ -218,4 +218,5 @@ namespace BussinessLayer
             return false;
         }
     }
+
 }

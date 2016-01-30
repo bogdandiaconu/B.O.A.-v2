@@ -56,6 +56,6 @@
         <asp:Label ID="Label14" runat="server" Text="Capse:"></asp:Label>
         <asp:TextBox ID="TextBox14" runat="server" Width="40px"></asp:TextBox>
 &nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button1" runat="server" Text="Add" />
+        <asp:Button ID="Button1" runat="server" Text="Add" OnClick="Button1_Click" />
     </p>
 </asp:Content>

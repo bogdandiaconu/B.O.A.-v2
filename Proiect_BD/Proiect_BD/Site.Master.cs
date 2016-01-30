@@ -10,7 +10,18 @@ using Microsoft.AspNet.Identity;
 
 namespace Proiect_BD
 {
-    public partial class SiteMaster : MasterPage
+    public static class MessageBox
+    {
+        public static void Show(this Page Page, String Message)
+    {
+        Page.ClientScript.RegisterStartupScript(
+           Page.GetType(),
+           "MessageBox",
+           "<script language='javascript'>alert('" + Message + "');</script>"
+        );
+    }
+}
+public partial class SiteMaster : MasterPage
     {
         private const string AntiXsrfTokenKey = "__AntiXsrfToken";
         private const string AntiXsrfUserNameKey = "__AntiXsrfUserName";

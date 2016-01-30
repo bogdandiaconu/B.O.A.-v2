@@ -11,9 +11,10 @@ namespace Proiect_BD
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            BindData();
-
+            if (!IsPostBack)
+            {
+                BindData();
+            }
         }
         protected void BindData()
         {
@@ -25,6 +26,9 @@ namespace Proiect_BD
         {
             GridView2.EditIndex = e.NewEditIndex;
             BindData();
+            GridView2.Rows[e.NewEditIndex].Cells[2].Controls[0].Visible = false;
+            GridView2.Rows[e.NewEditIndex].Cells[6].Controls[0].Visible = false;
+            
         }
         protected void CancelEdit(object sender, GridViewCancelEditEventArgs e)
         {
@@ -39,18 +43,42 @@ namespace Proiect_BD
             string Nume = ((TextBox)GridView2.Rows[e.RowIndex].Cells[3].Controls[0]).Text;
             string Prenume = ((TextBox)GridView2.Rows[e.RowIndex].Cells[4].Controls[0]).Text;
             string ID_Grad = ((TextBox)GridView2.Rows[e.RowIndex].Cells[5].Controls[0]).Text;
-            string CNP = ((TextBox)GridView2.Rows[e.RowIndex].Cells[6].Controls[0]).Text;
-            string ADresa = ((TextBox)GridView2.Rows[e.RowIndex].Cells[7].Controls[0]).Text;
-            string ID_Companie = ((TextBox)GridView2.Rows[e.RowIndex].Cells[8].Controls[0]).Text;
-            GridView2.EditIndex = -1;
-            
-            GridView2.DataBind();
+            string CNP = ((TextBox)GridView2.Rows[e.RowIndex].Cells[7].Controls[0]).Text;
+            string Adresa = ((TextBox)GridView2.Rows[e.RowIndex].Cells[8].Controls[0]).Text;
+            string ID_Companie = ((TextBox)GridView2.Rows[e.RowIndex].Cells[9].Controls[0]).Text;
+
+            if (BussinessLayer.clsBusiness_get_Student.update_Student(Int32.Parse(ID), Nume, Prenume, Int32.Parse(ID_Grad), CNP, Adresa, Int32.Parse(ID_Companie)))
+            {
+                GridView2.EditIndex = -1;
+                BindData();
+            }
+            else
+                MessageBox.Show(Page, "Datele introduse nu sunt valide!");
         }
 
         protected void Delete(object sender, GridViewDeleteEventArgs e)
         {
-            string ID = GridView2.Rows[e.RowIndex].Cells[2].Text;
+           // BussinessLayer.clsBusiness_get_Student.
+            //string ID = GridView2.Rows[e.RowIndex].Cells[2].Text;
 
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            if (BussinessLayer.clsBusiness_get_Student.insert_Student(TextBox1.Text, TextBox2.Text, Int32.Parse(TextBox3.Text), TextBox4.Text, TextBox5.Text, Int32.Parse(TextBox6.Text)))
+            {
+                BindData();
+
+            }
+            else
+                MessageBox.Show(Page, "Datele introduse nu sunt valide!");
+
+            TextBox1.Text = String.Empty;
+            TextBox2.Text = String.Empty;
+            TextBox3.Text = String.Empty;
+            TextBox4.Text = String.Empty;
+            TextBox5.Text = String.Empty;
+            TextBox6.Text = String.Empty;
 
         }
     }

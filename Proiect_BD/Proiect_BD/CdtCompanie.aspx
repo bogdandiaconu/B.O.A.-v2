@@ -22,8 +22,6 @@
             <SortedDescendingCellStyle BackColor="#FFFDF8" />
             <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
         </asp:GridView>
-</p>
-    <p>
         &nbsp;</p>
     <p>
         <asp:Label ID="Label1" runat="server" Text="Nume:"></asp:Label>
@@ -33,7 +31,7 @@
         <asp:Label ID="Label3" runat="server" Text="ID_Grad:"></asp:Label>
         <asp:TextBox ID="TextBox3" runat="server" Width="100px"></asp:TextBox>
 &nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button1" runat="server" Text="Add" />
+        <asp:Button ID="Button1" runat="server" Text="Add" OnClick="Button1_Click" />
     </p>
     <p>
     </p>

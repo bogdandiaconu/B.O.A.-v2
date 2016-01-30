@@ -11,7 +11,10 @@ namespace Proiect_BD
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            BindData();
+            if (!IsPostBack)
+            {
+                BindData();
+            }
         }
         protected void BindData()
         {
@@ -22,6 +25,7 @@ namespace Proiect_BD
         {
             GridView1.EditIndex = e.NewEditIndex;
             BindData();
+            GridView1.Rows[e.NewEditIndex].Cells[2].Controls[0].Visible = false;
         }
         protected void CancelEdit(object sender, GridViewCancelEditEventArgs e)
         {
@@ -34,18 +38,41 @@ namespace Proiect_BD
 
             string ID = ((TextBox)GridView1.Rows[e.RowIndex].Cells[2].Controls[0]).Text;
             string Nume = ((TextBox)GridView1.Rows[e.RowIndex].Cells[3].Controls[0]).Text;
-            string Prenume = ((TextBox)GridView1.Rows[e.RowIndex].Cells[4].Controls[0]).Text;
-            string ID_Grad = ((TextBox)GridView1.Rows[e.RowIndex].Cells[5].Controls[0]).Text;
+            string Pret = ((TextBox)GridView1.Rows[e.RowIndex].Cells[4].Controls[0]).Text;
+            string Data = ((TextBox)GridView1.Rows[e.RowIndex].Cells[5].Controls[0]).Text;
 
 
+            BussinessLayer.clsBusiness_get_Preturi.update_Pret(Int32.Parse(ID), Nume, Double.Parse(Pret), DateTime.Parse(Data));
+
+        
             GridView1.EditIndex = -1;
-
-            GridView1.DataBind();
+            BindData();
         }
 
         protected void Delete(object sender, GridViewDeleteEventArgs e)
         {
+          
 
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            double d;
+            DateTime dd;
+            Double.TryParse(TextBox2.Text, out d);
+            DateTime.TryParse(TextBox3.Text, out dd);
+            if (!Double.TryParse(TextBox2.Text, out d))
+                MessageBox.Show(Page, "Pretul introdus nu este corect!");
+            else if (!DateTime.TryParse(TextBox3.Text, out dd))
+                MessageBox.Show(Page, "Data introdusa nu este corecta!");
+            else
+            {
+                BussinessLayer.clsBusiness_get_Preturi.insert_Preturi(TextBox1.Text, Double.Parse(TextBox2.Text), DateTime.Parse(TextBox3.Text));
+                TextBox1.Text = string.Empty;
+                TextBox2.Text = string.Empty;
+                TextBox3.Text = string.Empty;
+                BindData();
+            }
 
         }
     }

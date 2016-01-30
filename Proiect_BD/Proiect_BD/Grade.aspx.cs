@@ -11,7 +11,10 @@ namespace Proiect_BD
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            BindData();
+            if (!IsPostBack)
+            {
+                BindData();
+            }
         }
         protected void BindData()
         {
@@ -22,6 +25,7 @@ namespace Proiect_BD
         {
             GridView1.EditIndex = e.NewEditIndex;
             BindData();
+            GridView1.Rows[e.NewEditIndex].Cells[2].Controls[0].Visible = false;
         }
         protected void CancelEdit(object sender, GridViewCancelEditEventArgs e)
         {
@@ -30,12 +34,13 @@ namespace Proiect_BD
         }
         protected void Update(object sender, GridViewUpdateEventArgs e)
         {
+
             GridView1.Rows[e.RowIndex].RowState = DataControlRowState.Edit;
 
             string ID = ((TextBox)GridView1.Rows[e.RowIndex].Cells[2].Controls[0]).Text;
-            string Nume = ((TextBox)GridView1.Rows[e.RowIndex].Cells[3].Controls[0]).Text;
-            string Prenume = ((TextBox)GridView1.Rows[e.RowIndex].Cells[4].Controls[0]).Text;
-            string ID_Grad = ((TextBox)GridView1.Rows[e.RowIndex].Cells[5].Controls[0]).Text;
+            string Grad = ((TextBox)GridView1.Rows[e.RowIndex].Cells[3].Controls[0]).Text;
+          
+           //ssLayer.clsBusiness_get_Grade.)
 
 
             GridView1.EditIndex = -1;

@@ -38,7 +38,7 @@
         <asp:Label ID="Label6" runat="server" Text="ID_Companie:"></asp:Label>
         <asp:TextBox ID="TextBox6" runat="server" Width="60px"></asp:TextBox>
 &nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button1" runat="server" Text="Add" />
+        <asp:Button ID="Button1" runat="server" Text="Add" OnClick="Button1_Click" />
     </p>
     <p>
     </p>
