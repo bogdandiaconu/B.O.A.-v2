@@ -39,10 +39,10 @@ namespace Proiect_BD
             GridView1.EditIndex = e.NewEditIndex;
 //           GridView1.DataBind();
             BindData();
+            GridView1.Rows[e.NewEditIndex].Cells[2].Controls[0].Visible = false;
         }
         protected void CancelEdit(object sender, GridViewCancelEditEventArgs e)
         {
-            e.Cancel = true;
             GridView1.EditIndex = -1;
             BindData();
         }

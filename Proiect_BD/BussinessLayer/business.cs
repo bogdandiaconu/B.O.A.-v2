@@ -62,21 +62,21 @@ namespace BussinessLayer
     }
     public class clsBusiness_get_Articole_Drepturi
     {
-        public static IQueryable<DataLayer.Models.ArticoleDrepturi> get_Articole_Drepturi()
+        public static IQueryable<DataLayer.Models.newArticoleDrepturi> get_Articole_Drepturi()
         {
             return DataLayer.Models.ArticoleDrepturi.get_ArticoleDrepturi();
         }
     }
     public class clsBusiness_get_ArticoleVest
     {
-        public static IQueryable<DataLayer.Models.ArticoleVest> get_ArticoleVest()
+        public static IQueryable<DataLayer.Models.newArticoleVest> get_ArticoleVest()
         {
             return DataLayer.Models.ArticoleVest.get_ArticoleVest();
         }
     }
     public class clsBusiness_get_CDT_Comp
     {
-        public static IQueryable<DataLayer.Models.CDT_Comp> get_CDT_Comp()
+        public static IQueryable<DataLayer.Models.newCDT_Comp> get_CDT_Comp()
         {
             return DataLayer.Models.CDT_Comp.get_CDT_comp();
         }
@@ -95,7 +95,7 @@ namespace BussinessLayer
     }
     public class clsBusiness_get_Companie
     {
-        public static IQueryable<DataLayer.Models.Companie> get_Companie()
+        public static IQueryable<DataLayer.Models.newCompanie> get_Companie()
         {
             return DataLayer.Models.Companie.get_Companie();
         }
@@ -128,7 +128,7 @@ namespace BussinessLayer
     }
     public class clsBusiness_get_Student
     {
-        public static IQueryable<DataLayer.Models.Student> get_Student()
+        public static IQueryable<DataLayer.Models.newStudent> get_Student()
         {
             return DataLayer.Models.Student.get_Student();
         }
