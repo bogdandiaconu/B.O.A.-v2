@@ -102,5 +102,21 @@ namespace DataLayer.Models
             else
                 return false;
         }
+
+        public static void increment_AlocareHrana(int student, int pret, int counter)
+        {
+            var bd = new DataLayer.Models.ProiectBDContext();
+            var aloc = (from b in bd.AlocareHranas
+                        where b.ID_Student == student &&
+                              b.ID_Pret == pret
+                        select b).First();
+
+            aloc.Counter = aloc.Counter+counter;
+
+            bd.Entry(aloc).State = System.Data.Entity.EntityState.Modified;
+            bd.SaveChanges();
+        }
     }
+
+
 }
