@@ -106,5 +106,18 @@ namespace DataLayer.Models
             bd.SaveChanges();
         }
 
+        public static bool Exists(int id)
+        {
+            var bd = new DataLayer.Models.ProiectBDContext();
+            var st = from b in bd.Students
+                      where b.ID_Student == id
+                      select b;
+            var list = st.ToList();
+            if (list.Count!=0)
+                return true;
+            else
+                return false;
+        }
+
     }
 }

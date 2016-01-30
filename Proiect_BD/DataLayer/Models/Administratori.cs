@@ -92,5 +92,18 @@ namespace DataLayer.Models
 
             bd.SaveChanges();
         }
+        public static bool Exists(int id)
+        {
+            var bd = new DataLayer.Models.ProiectBDContext();
+            var st = from b in bd.Administratoris
+                     where b.ID_Admistrator == id
+                     select b;
+
+            var list = st.ToList();
+            if (list.Count != 0)
+                return true;
+            else
+                return false;
+        }
     }
 }

@@ -82,5 +82,18 @@ namespace DataLayer.Models
             bd.Entry(cdt).State = System.Data.Entity.EntityState.Modified;
             bd.SaveChanges();
         }
+        public static bool Exists(int id)
+        {
+            var bd = new DataLayer.Models.ProiectBDContext();
+            var st = from b in bd.CDT_Comp
+                     where b.ID_Comandant == id
+                     select b;
+
+            var list = st.ToList();
+            if (list.Count != 0)
+                return true;
+            else
+                return false;
+        }
     }
 }

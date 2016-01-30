@@ -88,5 +88,19 @@ namespace DataLayer.Models
             bd.Entry(aloc).State = System.Data.Entity.EntityState.Modified;
             bd.SaveChanges();
         }
+        public static bool Exists(int student,int pret)
+        {
+            var bd = new DataLayer.Models.ProiectBDContext();
+            var st = from b in bd.AlocareHranas
+                     where b.ID_Student == student &&
+                           b.ID_Pret == pret
+                     select b;
+
+            var list = st.ToList();
+            if (list.Count != 0)
+                return true;
+            else
+                return false;
+        }
     }
 }

@@ -60,5 +60,17 @@ namespace DataLayer.Models
             bd.Entry(gr).State = System.Data.Entity.EntityState.Modified;
             bd.SaveChanges();
         }
+        public static bool Exists(int id)
+        {
+            var bd = new DataLayer.Models.ProiectBDContext();
+            var st = from g in bd.Grades
+                     where g.ID_Grad == id
+                     select g;
+            var list = st.ToList();
+            if (list.Count != 0)
+                return true;
+            else
+                return false;
+        }
     }
 }
