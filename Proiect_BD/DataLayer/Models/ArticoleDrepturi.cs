@@ -68,5 +68,35 @@ namespace DataLayer.Models
                         };
             return query;
         }
+
+        public static void insert_ArticoleDrepturi(int id_stud, int id_admin, DateTime data, int savoniera,
+                                                    int sapun, int spuma, int aparat, int caiete, int rigla,
+                                                    int guma, int crema, int maieu, int agrafe, int capse)
+        {
+            var bd = new DataLayer.Models.ProiectBDContext();
+
+            ArticoleDrepturi art = new ArticoleDrepturi
+            {
+                ID_Student = id_stud,
+                ID_Administrator = id_admin,
+                Data_Alocarii = data,
+                Savoniera = savoniera,
+                Sapun = sapun,
+                Spuma_ras = spuma,
+                Aparat_ras = aparat,
+                Caiete = caiete,
+                Rigla = rigla,
+                Guma = guma,
+                Crema = crema,
+                Maieu = maieu,
+                Agrafe = agrafe,
+                Capse = capse
+            };
+
+            bd.ArticoleDrepturis.Add(art);
+            bd.Entry(art).State = System.Data.Entity.EntityState.Added;
+            bd.SaveChanges();
+        }
+            
     }
 }

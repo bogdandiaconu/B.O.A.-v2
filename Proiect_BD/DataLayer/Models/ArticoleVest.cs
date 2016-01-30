@@ -92,5 +92,44 @@ namespace DataLayer.Models
                         };
             return query;
         }
+
+        public static void insert_ArticoleVest(int id_stud, int id_admin, DateTime data, int bocanci,
+                                                int capela, int cascheta, int costCamuflaj, int costTercot,
+                                                int costCamgarn, int camasaAlba, int camasaArma, int camasaCamo,
+                                                int boneta, int fular, int pantofi, int ghete, int nominal, int romania,
+                                                int cuc, int cravata, int scurtaO, int scurtaC)
+        {
+            var bd = new DataLayer.Models.ProiectBDContext();
+
+            ArticoleVest art = new ArticoleVest
+            {
+                ID_Student = id_stud,
+                ID_Administrator = id_admin,
+                Data_Alocarii = data,
+                Bocanci =bocanci,
+                Capela = capela,
+                Cascheta = cascheta,
+                Costum_Camuflaj = costCamuflaj,
+                Costum_Tercot = costTercot,
+                Costum_Camgarn = costCamgarn,
+                Camasa_Alba = camasaAlba,
+                Camasa_Camuflaj = camasaCamo,
+                Camasa_Arma =camasaArma,
+                Boneta = boneta,
+                Fular = fular,
+                Pantofi = pantofi,
+                Ghete = ghete,
+                Ecuson_Nominal = nominal,
+                Ecuson_Romania = romania,
+                Cuc = cuc,
+                Cravata = cravata,
+                Scurta_Oras = scurtaO,
+                Scurta_Camuflat = scurtaC
+            };
+
+            bd.ArticoleVests.Add(art);
+            bd.Entry(art).State = System.Data.Entity.EntityState.Added;
+            bd.SaveChanges();
+        }
     }
 }
