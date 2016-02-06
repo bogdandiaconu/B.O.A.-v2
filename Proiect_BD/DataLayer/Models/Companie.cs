@@ -44,14 +44,11 @@ namespace DataLayer.Models
                         };
             return query;
         }
-        public static IQueryable<Models.newCompanie> get_nume_Companie()
+        public static IQueryable<string> get_nume_Companie()
         {
             var bd = new DataLayer.Models.ProiectBDContext();
             var query = from b in bd.Companies
-                        select new newCompanie
-                        {
-                            Nume = b.Nume
-                        };
+                        select b.Nume;
             return query;
         }
 
