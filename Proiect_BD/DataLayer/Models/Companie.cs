@@ -44,6 +44,29 @@ namespace DataLayer.Models
                         };
             return query;
         }
+        public static IQueryable<Models.newCompanie> get_nume_Companie()
+        {
+            var bd = new DataLayer.Models.ProiectBDContext();
+            var query = from b in bd.Companies
+                        select new newCompanie
+                        {
+                            Nume = b.Nume
+                        };
+            return query;
+        }
+
+        public static IQueryable<Models.newCompanie> get_IDCompanie(string nume)
+        {
+            var bd = new DataLayer.Models.ProiectBDContext();
+            var query = from b in bd.Companies
+                        where b.Nume == nume
+                        select new newCompanie
+                        {
+                            ID_Companie = b.ID_Companie
+                           
+                        };
+            return query;
+        }
 
         public static void insert_Companie(string nume, int com, int admin)
         {

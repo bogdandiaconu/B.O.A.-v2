@@ -108,10 +108,10 @@ namespace DataLayer
                     if (j.ID_Pret == i.ID_Pret)
                     {
                         suma.Masa += i.Counter * j.Pret; break;
-                        
+
                     }
             }
-            
+
 
             foreach (var i in x[0].ArticoleDrepturis)
             {
@@ -124,52 +124,52 @@ namespace DataLayer
                 foreach (var j in y)
                     if (j.Data <= i.Data_Alocarii && j.Nume.Contains("Sapun"))
                     { suma.Sapun += i.Sapun == null ? default(int) : (double)i.Sapun * j.Pret; break; }
-                
+
                 aloc.Spuma_ras += i.Spuma_ras == null ? default(int) : (double)i.Spuma_ras;
                 foreach (var j in y)
                     if (j.Data <= i.Data_Alocarii && j.Nume.Contains("Spuma_ras"))
                     { suma.Spuma_ras += i.Spuma_ras == null ? default(int) : (double)i.Spuma_ras * j.Pret; break; }
-                
+
                 aloc.Aparat_ras += i.Aparat_ras == null ? default(int) : (double)i.Aparat_ras;
                 foreach (var j in y)
                     if (j.Data <= i.Data_Alocarii && j.Nume.Contains("Aparat_ras"))
                     { suma.Aparat_ras += i.Aparat_ras == null ? default(int) : (double)i.Aparat_ras * j.Pret; break; }
-                
+
                 aloc.Caiete += i.Caiete == null ? default(int) : (double)i.Caiete;
                 foreach (var j in y)
                     if (j.Data <= i.Data_Alocarii && j.Nume.Contains("Caiete"))
                     { suma.Caiete += i.Caiete == null ? default(int) : (double)i.Caiete * j.Pret; break; }
-               
+
                 aloc.Rigla += i.Rigla == null ? default(int) : (double)i.Rigla;
                 foreach (var j in y)
                     if (j.Data <= i.Data_Alocarii && j.Nume.Contains("Rigla"))
                     { suma.Rigla += i.Rigla == null ? default(int) : (double)i.Rigla * j.Pret; break; }
-                
+
                 aloc.Guma += i.Guma == null ? default(int) : (double)i.Guma;
                 foreach (var j in y)
                     if (j.Data <= i.Data_Alocarii && j.Nume.Contains("Guma"))
                     { suma.Guma += i.Guma == null ? default(int) : (double)i.Guma * j.Pret; break; }
-                
+
                 aloc.Crema += i.Crema == null ? default(int) : (double)i.Crema;
                 foreach (var j in y)
                     if (j.Data <= i.Data_Alocarii && j.Nume.Contains("Crema"))
                     { suma.Crema += i.Crema == null ? default(int) : (double)i.Crema * j.Pret; break; }
-                
+
                 aloc.Maieu += i.Maieu == null ? default(int) : (double)i.Maieu;
                 foreach (var j in y)
                     if (j.Data <= i.Data_Alocarii && j.Nume.Contains("Maieu"))
                     { suma.Maieu += i.Maieu == null ? default(int) : (double)i.Maieu * j.Pret; break; }
-                
+
                 aloc.Agrafe += i.Agrafe == null ? default(int) : (double)i.Agrafe;
                 foreach (var j in y)
                     if (j.Data <= i.Data_Alocarii && j.Nume.Contains("Agrafe"))
                     { suma.Agrafe += i.Agrafe == null ? default(int) : (double)i.Agrafe * j.Pret; break; }
-                
+
                 aloc.Capse += i.Capse == null ? default(int) : (double)i.Capse;
                 foreach (var j in y)
                     if (j.Data <= i.Data_Alocarii && j.Nume.Contains("Capse"))
                     { suma.Capse += i.Capse == null ? default(int) : (double)i.Capse * j.Pret; break; }
-                
+
             }
             foreach (var i in x[0].ArticoleVests)
             {
@@ -177,92 +177,92 @@ namespace DataLayer
                 foreach (var j in y)
                     if (j.Data <= i.Data_Alocarii && j.Nume.Contains("Bocanci"))
                     { suma.Bocanci += i.Bocanci == null ? default(int) : (double)i.Bocanci * j.Pret; break; }
-                
+
                 aloc.Capela += i.Capela == null ? default(int) : (double)i.Capela;
                 foreach (var j in y)
                     if (j.Data <= i.Data_Alocarii && j.Nume.Contains("Capela"))
                     { suma.Capela += i.Capela == null ? default(int) : (double)i.Capela * j.Pret; break; }
-                
+
                 aloc.Cascheta += i.Cascheta == null ? default(int) : (double)i.Cascheta;
                 foreach (var j in y)
                     if (j.Data <= i.Data_Alocarii && j.Nume.Contains("Cascheta"))
                     { suma.Cascheta += i.Cascheta == null ? default(int) : (double)i.Cascheta * j.Pret; break; }
-                
+
                 aloc.Costum_Camuflaj += i.Costum_Camuflaj == null ? default(int) : (double)i.Costum_Camuflaj;
                 foreach (var j in y)
                     if (j.Data <= i.Data_Alocarii && j.Nume.Contains("Costum_Camuflaj"))
                     { suma.Costum_Camuflaj += i.Costum_Camuflaj == null ? default(int) : (double)i.Costum_Camuflaj * j.Pret; break; }
-                
+
                 aloc.Costum_Tercot += i.Costum_Tercot == null ? default(int) : (double)i.Costum_Tercot;
                 foreach (var j in y)
                     if (j.Data <= i.Data_Alocarii && j.Nume.Contains("Costum_Tercot"))
                     { suma.Costum_Tercot += i.Costum_Tercot == null ? default(int) : (double)i.Costum_Tercot * j.Pret; break; }
-                
+
                 aloc.Costum_Camgarn += i.Costum_Camgarn == null ? default(int) : (double)i.Costum_Camgarn;
                 foreach (var j in y)
                     if (j.Data <= i.Data_Alocarii && j.Nume.Contains("Costum_Camgarn"))
                     { suma.Costum_Camgarn += i.Costum_Camgarn == null ? default(int) : (double)i.Costum_Camgarn * j.Pret; break; }
-                
+
                 aloc.Camasa_Alba += i.Camasa_Alba == null ? default(int) : (double)i.Camasa_Alba;
                 foreach (var j in y)
                     if (j.Data <= i.Data_Alocarii && j.Nume.Contains("Camasa_Alba"))
                     { suma.Camasa_Alba += i.Camasa_Alba == null ? default(int) : (double)i.Camasa_Alba * j.Pret; break; }
-                
+
                 aloc.Camasa_Arma += i.Camasa_Arma == null ? default(int) : (double)i.Camasa_Arma;
                 foreach (var j in y)
                     if (j.Data <= i.Data_Alocarii && j.Nume.Contains("Camasa_Arma"))
                     { suma.Camasa_Arma += i.Camasa_Arma == null ? default(int) : (double)i.Camasa_Arma * j.Pret; break; }
-                
+
                 aloc.Camasa_Camuflaj += i.Camasa_Camuflaj == null ? default(int) : (double)i.Camasa_Camuflaj;
                 foreach (var j in y)
                     if (j.Data <= i.Data_Alocarii && j.Nume.Contains("Camasa_Camuflaj"))
                     { suma.Camasa_Camuflaj += i.Camasa_Camuflaj == null ? default(int) : (double)i.Camasa_Camuflaj * j.Pret; break; }
-                
+
                 aloc.Boneta += i.Boneta == null ? default(int) : (double)i.Boneta;
                 foreach (var j in y)
                     if (j.Data <= i.Data_Alocarii && j.Nume.Contains("Boneta"))
                     { suma.Boneta += i.Boneta == null ? default(int) : (double)i.Boneta * j.Pret; break; }
-                
+
                 aloc.Fular += i.Fular == null ? default(int) : (double)i.Fular;
                 foreach (var j in y)
                     if (j.Data <= i.Data_Alocarii && j.Nume.Contains("Fular"))
                     { suma.Fular += i.Fular == null ? default(int) : (double)i.Fular * j.Pret; break; }
-                
+
                 aloc.Pantofi += i.Pantofi == null ? default(int) : (double)i.Pantofi;
                 foreach (var j in y)
                     if (j.Data <= i.Data_Alocarii && j.Nume.Contains("Pantofi"))
                     { suma.Pantofi += i.Pantofi == null ? default(int) : (double)i.Pantofi * j.Pret; break; }
-                
+
                 aloc.Ghete += i.Ghete == null ? default(int) : (double)i.Ghete;
                 foreach (var j in y)
                     if (j.Data <= i.Data_Alocarii && j.Nume.Contains("Ghete"))
                     { suma.Ghete += i.Ghete == null ? default(int) : (double)i.Ghete * j.Pret; break; }
-                
+
                 aloc.Ecuson_Nominal += i.Ecuson_Nominal == null ? default(int) : (double)i.Ecuson_Nominal;
                 foreach (var j in y)
                     if (j.Data <= i.Data_Alocarii && j.Nume.Contains("Ecuson_Nominal"))
                     { suma.Ecuson_Nominal += i.Ecuson_Nominal == null ? default(int) : (double)i.Ecuson_Nominal * j.Pret; break; }
-                
+
                 aloc.Ecuson_Romania += i.Ecuson_Romania == null ? default(int) : (double)i.Ecuson_Romania;
                 foreach (var j in y)
                     if (j.Data <= i.Data_Alocarii && j.Nume.Contains("Ecuson_Romania"))
                     { suma.Ecuson_Romania += i.Ecuson_Romania == null ? default(int) : (double)i.Ecuson_Romania * j.Pret; break; }
-                
+
                 aloc.Cuc += i.Cuc == null ? default(int) : (double)i.Cuc;
                 foreach (var j in y)
                     if (j.Data <= i.Data_Alocarii && j.Nume.Contains("Cuc"))
                     { suma.Cuc += i.Cuc == null ? default(int) : (double)i.Cuc * j.Pret; break; }
-                
+
                 aloc.Cravata += i.Cravata == null ? default(int) : (double)i.Cravata;
                 foreach (var j in y)
                     if (j.Data <= i.Data_Alocarii && j.Nume.Contains("Cravata"))
                     { suma.Cravata += i.Cravata == null ? default(int) : (double)i.Cravata * j.Pret; break; }
-                
+
                 aloc.Scurta_Oras += i.Scurta_Oras == null ? default(int) : (double)i.Scurta_Oras;
                 foreach (var j in y)
                     if (j.Data <= i.Data_Alocarii && j.Nume.Contains("Scurta_Oras"))
                     { suma.Scurta_Oras += i.Scurta_Oras == null ? default(int) : (double)i.Scurta_Oras * j.Pret; break; }
-                
+
                 aloc.Scurta_Camuflat += i.Scurta_Camuflat == null ? default(int) : (double)i.Scurta_Camuflat;
                 foreach (var j in y)
                     if (j.Data <= i.Data_Alocarii && j.Nume.Contains("Scurta_Camuflat"))
@@ -304,10 +304,30 @@ namespace DataLayer
             suma.Nume = "PRETURI";
             suma.Prenume = "Suma Totala= " + sumaTotala.ToString();
 
-            List < AlocariTotale > list = new List<AlocariTotale>();
+            List<AlocariTotale> list = new List<AlocariTotale>();
             list.Add(aloc);
             list.Add(suma);
             return list;
         }
+        public static IQueryable<Models.newCDT_Comp> get_CDT_comp_by_compname(string name)
+        {
+            var bd = new DataLayer.Models.ProiectBDContext();
+            var query = from b in bd.CDT_Comp
+                        join g in bd.Companies on b.ID_Comandant equals g.ID_Comandant
+                        join d in bd.Grades on b.ID_Grad equals d.ID_Grad
+                        where g.Nume== name
+                        select new DataLayer.Models.newCDT_Comp
+                        {
+                            ID_Comandant = b.ID_Comandant,
+                            Nume = b.Nume,
+                            Prenume = b.Prenume,
+                            ID_Grad = b.ID_Grad,
+                            Grad =d.Nume
+                        };
+            return query;
+        }
+
+
+
     }
 }

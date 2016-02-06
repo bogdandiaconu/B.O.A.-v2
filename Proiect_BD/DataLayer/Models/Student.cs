@@ -58,6 +58,30 @@ namespace DataLayer.Models
             return query;
         }
 
+        public static IQueryable<Models.newStudent> Get_Student_by_comp(string nume)
+        {
+            var bd = new DataLayer.Models.ProiectBDContext();
+            var query = from c in bd.Students
+                        join g in bd.Grades on c.ID_Grad equals g.ID_Grad
+                        join d in bd.Companies on c.ID_Companie equals d.ID_Companie
+                        where d.Nume == nume
+                        select new newStudent
+                        {
+                            ID_Student = c.ID_Student,
+                            Nume = c.Nume,
+                            Prenume = c.Prenume,
+                            ID_Grad = g.ID_Grad,
+                            Grad = c.Nume,
+                            CNP = c.CNP,
+                            Adresa = c.Adresa,
+                            ID_Companie = c.ID_Companie,
+                            Companie = d.Nume
+                        };
+
+            return query;
+
+        }
+
         public static void insert_Student(string nume, string prenume, int grad, string cnp, string adresa, int comp)
         {
             var bd = new DataLayer.Models.ProiectBDContext();

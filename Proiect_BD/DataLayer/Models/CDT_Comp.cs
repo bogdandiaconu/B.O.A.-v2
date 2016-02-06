@@ -41,6 +41,7 @@ namespace DataLayer.Models
             return query;
         }
 
+
         public static void insert_CDT_Comp(string nume, string prenume, int grad)
         {
             var bd = new DataLayer.Models.ProiectBDContext();
