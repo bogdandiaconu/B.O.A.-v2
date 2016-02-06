@@ -81,5 +81,40 @@ namespace Proiect_BD
             TextBox6.Text = String.Empty;
 
         }
+
+        protected void DropDownList2_SelectedIndexChanged(object sender, EventArgs e)
+        {            
+            GridView3.Visible = false;
+        }
+
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(DropDownList1.SelectedValue == "")
+            {
+                DropDownList2.Visible = false;
+                Button2.Visible = false;
+                GridView3.Visible = false;
+            }
+            if(DropDownList1.SelectedValue=="StudentByCompanie")
+            {
+                DropDownList2.DataSource = DataLayer.Models.Companie.get_nume_Companie().ToList();
+                DropDownList2.DataBind();
+                DropDownList2.Visible = true;
+                Button2.Visible = true;
+            }
+            
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            if (DropDownList1.SelectedValue == "StudentByCompanie")
+            {
+                GridView3.DataSource = DataLayer.Models.Student.Get_Student_by_comp(DropDownList2.SelectedValue.ToString()).ToList();
+                GridView3.DataBind();
+            }
+            GridView3.Visible = true;
+           // Response.Redirect("Query.aspx");
+
+        }
     }
 }

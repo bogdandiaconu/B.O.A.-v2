@@ -75,5 +75,31 @@ namespace Proiect_BD
            
         }
 
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (DropDownList1.SelectedValue == "")
+            {
+                DropDownList2.Visible = false;
+                Button2.Visible = false;
+                GridView2.Visible = false;
+            }
+            if (DropDownList1.SelectedValue == "Sumar")
+            {
+                DropDownList2.DataSource = DataLayer.Models.Companie.get_nume_Companie().ToList();
+                DropDownList2.DataBind();
+                DropDownList2.Visible = true;
+            }
+            Button2.Visible = true;
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            if (DropDownList1.SelectedValue == "Sumar")
+            {
+                GridView2.DataSource = DataLayer.Models.Student.Get_Student_by_comp(DropDownList2.SelectedValue.ToString()).ToList();
+                GridView2.DataBind();
+            }
+            GridView2.Visible = true;
+        }
     }
 }

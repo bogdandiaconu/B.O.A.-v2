@@ -3,7 +3,7 @@
     <h2>Grade</h2>
     <p>&nbsp;</p>
     <p>
-        <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" OnRowCancelingEdit="CancelEdit" OnRowDeleting="Delete" OnRowEditing="Edit" OnRowUpdating="Update">
+        <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" AllowPaging="True" Width="400px" CssClass="table table-striped" GridLines="Both" OnRowCancelingEdit="CancelEdit" OnRowDeleting="Delete" OnRowEditing="Edit" OnRowUpdating="Update" OnPageIndexChanging="GridView1_PageIndexChanging">
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
             <Columns>
                 <asp:CommandField ShowEditButton="True" />

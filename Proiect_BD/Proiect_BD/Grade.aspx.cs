@@ -40,8 +40,7 @@ namespace Proiect_BD
             string ID = ((TextBox)GridView1.Rows[e.RowIndex].Cells[2].Controls[0]).Text;
             string Grad = ((TextBox)GridView1.Rows[e.RowIndex].Cells[3].Controls[0]).Text;
           
-           //ssLayer.clsBusiness_get_Grade.)
-
+           
 
             GridView1.EditIndex = -1;
 
@@ -52,6 +51,14 @@ namespace Proiect_BD
         {
 
 
+        }
+
+        protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+           
+            GridView1.PageIndex = e.NewPageIndex;
+            //  GridView1.DataBind();
+            BindData();
         }
     }
 }

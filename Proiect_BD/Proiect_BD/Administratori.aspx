@@ -1,16 +1,14 @@
 ﻿
 
-
-
-
 <%@ Page Title="Administratori" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Administratori.aspx.cs" Inherits="Proiect_BD.Administratori" %>
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <h2>Administratori</h2>
+    <h2>Administratori</h2>    
     <p>&nbsp;</p>
     <p>
-        <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" OnRowDeleting="Delete" OnRowEditing="Edit" OnRowUpdating="Update" Width="244px"  EnableViewState="true" OnRowCancelingEdit="CancelEdit" >
+       
+        <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" CssClass="table table-striped" GridLines="Both" OnRowDeleting="Delete" OnRowEditing="Edit" OnRowUpdating="Update" Width="600px"  EnableViewState="true" OnRowCancelingEdit="CancelEdit" >
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
             <Columns>
                 <asp:CommandField ShowEditButton="True" />
@@ -27,6 +25,7 @@
             <SortedDescendingCellStyle BackColor="#FFFDF8" />
             <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
         </asp:GridView>
+            
     </p>
     <p>
         &nbsp;</p>
@@ -39,9 +38,8 @@
         <asp:TextBox ID="TextBox3" runat="server" Height="20px" Width="70px" Font-Size="Small"></asp:TextBox>
         <asp:Button ID="Button1" runat="server" Font-Size="Medium" Height="26px" OnClick="Button1_Click" Text="Add" Width="72px" />
     </h2>
-    <h2>
-        &nbsp;&nbsp;&nbsp;
-    </h2>
+<p>
+        &nbsp;</p>
 
 
 </asp:Content>

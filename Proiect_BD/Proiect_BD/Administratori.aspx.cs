@@ -44,7 +44,6 @@ namespace Proiect_BD
         protected void Edit(object sender, GridViewEditEventArgs e)
         {
             GridView1.EditIndex = e.NewEditIndex;
-//           GridView1.DataBind();
             BindData();
             GridView1.Rows[e.NewEditIndex].Cells[2].Controls[0].Visible = false;
 

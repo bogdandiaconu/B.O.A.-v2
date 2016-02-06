@@ -6937,3 +6937,16 @@ a.list-group-item-danger.active:focus {
 .popover {
   color: #333333;
 }
+.Label1
+{
+    position: fixed;
+    font-size: 30px;
+    color: #0000FF;
+    text-align: center;
+    width:500px;
+    display:block;
+}
+.center{
+width:200px;
+margin:auto;
+}

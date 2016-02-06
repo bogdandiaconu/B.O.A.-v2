@@ -1,10 +1,11 @@
 ﻿<%@ Page Title="Alocare Hrana" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Alocare.aspx.cs" Inherits="Proiect_BD.Alocare" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h2>Alocare Hrana</h2>
+    
 <p>&nbsp;</p>
     <p>&nbsp;</p>
     <p>
-        <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="Both" OnRowCancelingEdit="CancelEdit" OnRowDeleting="Delete" OnRowEditing="Edit" OnRowUpdating="Update">
+        <asp:GridView ID="GridView1" runat="server" CellPadding="4" CssClass="table table-striped" ForeColor="#333333" GridLines="Both" OnRowCancelingEdit="CancelEdit" OnRowDeleting="Delete" OnRowEditing="Edit" OnRowUpdating="Update">
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
             <Columns>
                 <asp:CommandField ShowEditButton="True" />
