@@ -177,6 +177,20 @@ namespace BussinessLayer
         {
             return DataLayer.Models.Grade.get_Grade();
         }
+        public static bool insert_Grade(string grad)
+        {
+                DataLayer.Models.Grade.insert_Grade(grad);
+                return true;
+        }
+        public static bool delete_Grade(int id)
+        {
+            if(DataLayer.Models.Grade.Exists(id))
+            {
+                DataLayer.Models.Grade.delete_Grade(id);
+                return true;
+            }
+            return false;
+        }
     }
     public class clsBusiness_get_Preturi
     {
@@ -188,11 +202,25 @@ namespace BussinessLayer
         {
             DataLayer.Models.Preturi.insert_Preturi(nume, pret, data);
         }
-        public static void update_Pret(int id, string nume, double pret, DateTime data)
+        public static bool update_Preturi(int id, string nume, double pret, DateTime data)
         {
-            DataLayer.Models.Preturi.update_Preturi(id, nume, pret, data);
+            if (DataLayer.Models.Preturi.Exists(id))
+            {
+                DataLayer.Models.Preturi.update_Preturi(id, nume, pret, data);
+                return true;
+            }
+            return false;
         }
-    }
+        public static bool delete_Preturi(int id)
+        {
+            if(DataLayer.Models.Preturi.Exists(id))
+            {
+                DataLayer.Models.Preturi.delete_Preturi(id);
+                return true;
+            }
+            return false;
+        }
+   }
     public class clsBusiness_get_Student
     {
         public static IQueryable<DataLayer.Models.newStudent> get_Student()
@@ -217,6 +245,39 @@ namespace BussinessLayer
             }
             return false;
         }
-    }
+        public static bool delete_Student(int id)
+        {
+            if(DataLayer.Models.Student.Exists(id))
+            {
+                DataLayer.Models.Student.delete_Student(id);
+                return true;
 
+            }
+            return false;
+        }
+    }
+    
+    public class clsBusiness_queries
+    {
+        public static List<DataLayer.AlocariTotale> get_Total(int id)
+        {
+            if(DataLayer.Models.Student.Exists(id))
+            {
+                return DataLayer.clsDataLayer.total(id);
+            }
+            return new List<DataLayer.AlocariTotale>();
+        }
+        public static IQueryable<DataLayer.Models.newCDT_Comp> get_CDT_comp_by_compname(string name)
+        {
+            return DataLayer.clsDataLayer.get_CDT_comp_by_compname(name);
+        }
+        public static IQueryable<SumarCompanie> get_sumar_comp_by_name(string name)
+        {
+            return DataLayer.clsDataLayer.get_sumar_comp_by_name(name);
+        }
+        public static IQueryable<DataLayer.Models.newStudent> Get_Student_by_comp(string nume)
+        {
+            return DataLayer.Models.Student.Get_Student_by_comp(nume);
+        }
+   }
 }
