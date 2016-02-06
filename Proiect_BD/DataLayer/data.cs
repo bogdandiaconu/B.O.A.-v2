@@ -79,6 +79,20 @@ namespace DataLayer
         }
 
     }
+    public class SumarCompanie
+    {
+        public string nume_comp { get; set; }
+        public string nume_cdt { get; set; }
+        public string nume_adm { get; set; }
+        public int numar_stud { get; set; }
+        public SumarCompanie()
+        {
+            nume_comp = "";
+            nume_cdt = "";
+            nume_adm = "";
+            numar_stud = 0;
+        }
+    }
     public class clsDataLayer
     {
         public static List<AlocariTotale> total(int id)
@@ -325,6 +339,32 @@ namespace DataLayer
                             Grad =d.Nume
                         };
             return query;
+        }
+
+        public static IQueryable<SumarCompanie> get_sumar_comp_by_name(string name)
+        {
+            var bd = new DataLayer.Models.ProiectBDContext();
+          int  query1 = (from b in bd.Administratoris
+                          join c in bd.Companies on b.ID_Admistrator equals c.ID_Administrator
+                          join d in bd.CDT_Comp on c.ID_Comandant equals d.ID_Comandant
+                          join e in bd.Students on c.ID_Companie equals e.ID_Companie
+                          where d.Nume == name
+                          select e.ID_Student).Count();
+
+            var query = from b in bd.Administratoris
+                        join c in bd.Companies on b.ID_Admistrator equals c.ID_Administrator
+                        join d in bd.CDT_Comp on c.ID_Comandant equals d.ID_Comandant
+                        join e in bd.Students on c.ID_Companie equals e.ID_Companie
+                        where d.Nume == name
+                        select new SumarCompanie
+                        {
+                            nume_comp = d.Nume,
+                            nume_adm = b.Nume + " " + b.Prenume,
+                            nume_cdt = d.Nume + " " + d.Prenume,
+                            numar_stud = query1
+                        };
+            return query;
+
         }
 
 
